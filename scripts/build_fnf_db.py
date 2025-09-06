@@ -72,6 +72,13 @@ def find_header_indexes(rows):
             if label in str(cell):
                 return j
         return None
+    # Allow finding detail headers that may live on the next header line(s)
+    def find_any_col(label):
+        for r in rows:
+            for j,cell in enumerate(r):
+                if str(cell).strip() == label:
+                    return j
+        return None
     return {
         'row': header_idx,
         'product': find_col('Product'),
@@ -81,15 +88,15 @@ def find_header_indexes(rows):
         'loanAmountTier': find_col('Loan Amount Tier'),
         'minLoan': find_col('Min. Loan:'),
         'maxLoan': find_col('Max. Loan:'),
-        'purchaseLTV': find_col('Purchase LTV'),
-        'purchaseLTARV': find_col('Purchase LTARV'),
-        'purchaseLTC': find_col('Purchase LTC'),
-        'refiLTV': find_col('Refinance LF RehabLTV'),
-        'refiLTARV': find_col('Refinance LF RehabLTARV'),
-        'refiLTC': find_col('Refinance LF RehabLTC'),
-        'tier1': find_col('Tier 1'),
-        'tier2': find_col('Tier 2'),
-        'tier3': find_col('Tier 3')
+        'purchaseLTV': find_any_col('Purchase LTV') or find_col('Purchase LTV'),
+        'purchaseLTARV': find_any_col('Purchase LTARV') or find_col('Purchase LTARV'),
+        'purchaseLTC': find_any_col('Purchase LTC') or find_col('Purchase LTC'),
+        'refiLTV': find_any_col('Refinance LF RehabLTV') or find_col('Refinance LF RehabLTV'),
+        'refiLTARV': find_any_col('Refinance LF RehabLTARV') or find_col('Refinance LF RehabLTARV'),
+        'refiLTC': find_any_col('Refinance LF RehabLTC') or find_col('Refinance LF RehabLTC'),
+        'tier1': find_any_col('Tier 1') or find_col('Tier 1'),
+        'tier2': find_any_col('Tier 2') or find_col('Tier 2'),
+        'tier3': find_any_col('Tier 3') or find_col('Tier 3')
     }
 
 def main():
@@ -103,6 +110,7 @@ def main():
     known_refi     = [known['refi']['LTV'],     known['refi']['LTARV'],     known['refi']['LTC']]
 
     pricing_rows = []
+    caps_by_fico = {}  # key: (level, minFico) -> {purchase:{}, refi:{}}
 
     # Load all rows first to identify header columns
     with open(CSV_PATH, newline='') as f:
@@ -135,12 +143,8 @@ def main():
             loanAmountTier = int(str(row[tier]).strip()) if tier is not None and tier < len(row) else None
         except Exception:
             loanAmountTier = None
-        if not loanAmountTier:
-            continue
         minLoan = parse_money(row[minL]) if minL is not None and minL < len(row) else None
         maxLoan = parse_money(row[maxL]) if maxL is not None and maxL < len(row) else None
-        if not (minLoan and maxLoan):
-            continue
 
         purchase = {
             'LTV':   parse_pct(row[pLTV]) if pLTV is not None and pLTV < len(row) else None,
@@ -152,6 +156,25 @@ def main():
             'LTARV': parse_pct(row[rARV]) if rARV is not None and rARV < len(row) else None,
             'LTC':   parse_pct(row[rLTC]) if rLTC is not None and rLTC < len(row) else None,
         }
+
+        # Fallback: if any cap is missing, scan percentage triplets and align to known A-row triplets
+        if any(v is None for v in purchase.values()) or any(v is None for v in refi.values()):
+            pcts = extract_percentages(row)
+            if pcts:
+                p_ix = find_triplet_indices(pcts, known_purchase)
+                r_ix = find_triplet_indices(pcts, known_refi)
+                if p_ix is not None:
+                    purchase = {
+                        'LTV': pcts[p_ix+0],
+                        'LTARV': pcts[p_ix+1],
+                        'LTC': pcts[p_ix+2]
+                    }
+                if r_ix is not None:
+                    refi = {
+                        'LTV': pcts[r_ix+0],
+                        'LTARV': pcts[r_ix+1],
+                        'LTC': pcts[r_ix+2]
+                    }
 
         # Note rates from explicit Tier columns if present; else fallback to scanning percentages near end
         noteRates = None
@@ -166,25 +189,57 @@ def main():
             if len(rates) == 3:
                 noteRates = { 'Tier1': rates[0], 'Tier2': rates[1], 'Tier3': rates[2] }
 
-        pricing_rows.append({
-            'product':'FNF',
-            'borrowerLevel': borrowerLevel,
-            'minExperienceMonths': minExperienceMonths,
-            'minFico': minFico,
-            'loanAmountTier': loanAmountTier,
-            'minLoan': minLoan,
-            'maxLoan': maxLoan,
-            'purchase': purchase,
-            'refi': refi,
-            'noteRates': noteRates
-        })
+        # If we have caps but no tier/minLoan, store as caps_by_fico for later backfill
+        if (loanAmountTier is None or minLoan is None or maxLoan is None) and all(v is not None for v in purchase.values()) and all(v is not None for v in refi.values()):
+            caps_by_fico[(borrowerLevel, minFico)] = { 'purchase': purchase, 'refi': refi }
+            continue
+
+        if loanAmountTier and minLoan and maxLoan:
+            pricing_rows.append({
+                'product':'FNF',
+                'borrowerLevel': borrowerLevel,
+                'minExperienceMonths': minExperienceMonths,
+                'minFico': minFico,
+                'loanAmountTier': loanAmountTier,
+                'minLoan': minLoan,
+                'maxLoan': maxLoan,
+                'purchase': purchase,
+                'refi': refi,
+                'noteRates': noteRates
+            })
 
     # Merge with existing rows, de-duplicate by (level, fico, tier)
     def key(r):
         return (r['borrowerLevel'], r['minFico'], r['loanAmountTier'])
     existing = { key(r): r for r in db['products']['FNF']['pricing_rows'] }
     for r in pricing_rows:
-        existing[key(r)] = r
+        k = key(r)
+        if k in existing:
+            base = existing[k]
+            # Only overwrite with non-null values
+            for blk in ('purchase','refi'):
+                for cap in ('LTV','LTARV','LTC'):
+                    if r[blk].get(cap) is not None:
+                        base[blk][cap] = r[blk][cap]
+                    elif base[blk].get(cap) is None:
+                        # try backfill from caps_by_fico
+                        caps = caps_by_fico.get((base['borrowerLevel'], base['minFico']))
+                        if caps and caps[blk].get(cap) is not None:
+                            base[blk][cap] = caps[blk][cap]
+            if r.get('noteRates'):
+                base['noteRates'] = r['noteRates']
+            base['minLoan'] = r['minLoan'] or base['minLoan']
+            base['maxLoan'] = r['maxLoan'] or base['maxLoan']
+            base['minExperienceMonths'] = r['minExperienceMonths'] or base.get('minExperienceMonths')
+        else:
+            # backfill caps if missing using caps_by_fico
+            caps = caps_by_fico.get((r['borrowerLevel'], r['minFico']))
+            if caps:
+                for blk in ('purchase','refi'):
+                    for cap in ('LTV','LTARV','LTC'):
+                        if r[blk].get(cap) is None and caps[blk].get(cap) is not None:
+                            r[blk][cap] = caps[blk][cap]
+            existing[k] = r
     merged = sorted(existing.values(), key=lambda r: (r['borrowerLevel'], r['minFico'], r['loanAmountTier']))
 
     # Ensure experience requirements include C and D defaults

@@ -201,7 +201,8 @@ curl -s -X POST http://localhost:3000/api/loan-details \
 - Kept existing endpoint `POST /api/loan-details` (basic sizing) for backward compatibility.
 - Documented borrower personas (Levels A/B), voice-agent input checklist, and guardrails.
 - Health endpoints available: `GET /` and `GET /health`.
-- Known gaps (to be added next): borrower levels C/D, points adjustments, judicial/non-judicial linkage, additional products (Bridge/GUC/DSCR).
+- Data ingestion updated: added XLSX-based builder to extract caps/rates from original workbook (no CSV header ambiguity). A/B caps now fully populated except 1 pending source row (B, FICO 680, Tier 4), which is gated with a clear config_missing_caps outcome.
+- Known gaps (to be added next): remaining C/D cleanup, points adjustments, judicial/non-judicial linkage, additional products (Bridge/GUC/DSCR).
 
 ---
 

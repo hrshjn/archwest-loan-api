@@ -94,19 +94,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09029,
+            "Tier1": 0.09029000000000001,
             "Tier2": 0.09079000000000001,
-            "Tier3": 0.09129
+            "Tier3": 0.09129000000000001
           }
         },
         {
@@ -118,19 +118,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09029,
+            "Tier1": 0.09029000000000001,
             "Tier2": 0.09079000000000001,
-            "Tier3": 0.09129
+            "Tier3": 0.09129000000000001
           }
         },
         {
@@ -142,19 +142,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7999999999999999,
+            "LTARV": 0.725,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09279,
+            "Tier1": 0.09279000000000001,
             "Tier2": 0.09329000000000001,
-            "Tier3": 0.09379
+            "Tier3": 0.09379000000000001
           }
         },
         {
@@ -166,19 +166,19 @@
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.09529,
-            "Tier2": 0.09579,
-            "Tier3": 0.09629
+            "Tier1": 0.09529000000000001,
+            "Tier2": 0.09579000000000001,
+            "Tier3": 0.09629000000000001
           }
         },
         {
@@ -190,19 +190,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.08904,
+            "Tier1": 0.08904000000000001,
             "Tier2": 0.08954000000000001,
-            "Tier3": 0.09004
+            "Tier3": 0.09004000000000001
           }
         },
         {
@@ -214,19 +214,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.75,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.08904,
+            "Tier1": 0.08904000000000001,
             "Tier2": 0.08954000000000001,
-            "Tier3": 0.09004
+            "Tier3": 0.09004000000000001
           }
         },
         {
@@ -238,19 +238,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.825,
+            "LTARV": 0.75,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09154,
+            "Tier1": 0.09154000000000001,
             "Tier2": 0.09204000000000001,
-            "Tier3": 0.09254
+            "Tier3": 0.09254000000000001
           }
         },
         {
@@ -262,19 +262,19 @@
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09404,
+            "Tier1": 0.09404000000000001,
             "Tier2": 0.09454000000000001,
-            "Tier3": 0.09504
+            "Tier3": 0.09504000000000001
           }
         },
         {
@@ -286,19 +286,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8500000000000001,
+            "LTARV": 0.8,
+            "LTC": 0.9
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8500000000000001,
+            "LTARV": 0.8,
+            "LTC": 0.875
           },
           "noteRates": {
-            "Tier1": 0.08778999999999999,
+            "Tier1": 0.08779,
             "Tier2": 0.08829000000000001,
-            "Tier3": 0.08879
+            "Tier3": 0.08879000000000001
           }
         },
         {
@@ -310,19 +310,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8500000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.9
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8500000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.875
           },
           "noteRates": {
-            "Tier1": 0.08778999999999999,
+            "Tier1": 0.08779,
             "Tier2": 0.08829000000000001,
-            "Tier3": 0.08879
+            "Tier3": 0.08879000000000001
           }
         },
         {
@@ -334,19 +334,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.85,
+            "LTARV": 0.775,
+            "LTC": 0.9
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.875
           },
           "noteRates": {
-            "Tier1": 0.09029,
+            "Tier1": 0.09029000000000001,
             "Tier2": 0.09079000000000001,
-            "Tier3": 0.09129
+            "Tier3": 0.09129000000000001
           }
         },
         {
@@ -358,19 +358,19 @@
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09279,
+            "Tier1": 0.09279000000000001,
             "Tier2": 0.09329000000000001,
-            "Tier3": 0.09379
+            "Tier3": 0.09379000000000001
           }
         },
         {
@@ -382,19 +382,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8500000000000001,
+            "LTARV": 0.8,
+            "LTC": 0.9
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8500000000000001,
+            "LTARV": 0.8,
+            "LTC": 0.875
           },
           "noteRates": {
             "Tier1": 0.08654,
             "Tier2": 0.08704,
-            "Tier3": 0.08753999999999999
+            "Tier3": 0.08754
           }
         },
         {
@@ -406,19 +406,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8500000000000001,
+            "LTARV": 0.8,
+            "LTC": 0.9
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8500000000000001,
+            "LTARV": 0.8,
+            "LTC": 0.875
           },
           "noteRates": {
             "Tier1": 0.08654,
             "Tier2": 0.08704,
-            "Tier3": 0.08753999999999999
+            "Tier3": 0.08754
           }
         },
         {
@@ -430,19 +430,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.85,
+            "LTARV": 0.8,
+            "LTC": 0.9
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.8,
+            "LTC": 0.875
           },
           "noteRates": {
-            "Tier1": 0.08904,
+            "Tier1": 0.08904000000000001,
             "Tier2": 0.08954000000000001,
-            "Tier3": 0.09004
+            "Tier3": 0.09004000000000001
           }
         },
         {
@@ -454,19 +454,19 @@
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09154,
+            "Tier1": 0.09154000000000001,
             "Tier2": 0.09204000000000001,
-            "Tier3": 0.09254
+            "Tier3": 0.09254000000000001
           }
         },
         {
@@ -478,19 +478,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.09529,
-            "Tier2": 0.09579,
-            "Tier3": 0.09629
+            "Tier1": 0.09529000000000001,
+            "Tier2": 0.09579000000000001,
+            "Tier3": 0.09629000000000001
           }
         },
         {
@@ -502,19 +502,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.09529,
-            "Tier2": 0.09579,
-            "Tier3": 0.09629
+            "Tier1": 0.09529000000000001,
+            "Tier2": 0.09579000000000001,
+            "Tier3": 0.09629000000000001
           }
         },
         {
@@ -526,19 +526,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7749999999999999,
+            "LTARV": 0.7,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.75,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.09779,
-            "Tier2": 0.09829,
-            "Tier3": 0.09878999999999999
+            "Tier1": 0.09779000000000002,
+            "Tier2": 0.09829000000000002,
+            "Tier3": 0.09879000000000002
           }
         },
         {
@@ -560,9 +560,9 @@
             "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.10029,
-            "Tier2": 0.10079,
-            "Tier3": 0.10128999999999999
+            "Tier1": 0.10029000000000002,
+            "Tier2": 0.10079000000000002,
+            "Tier3": 0.10129000000000002
           }
         },
         {
@@ -574,19 +574,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09404,
+            "Tier1": 0.09404000000000001,
             "Tier2": 0.09454000000000001,
-            "Tier3": 0.09504
+            "Tier3": 0.09504000000000001
           }
         },
         {
@@ -598,19 +598,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09404,
+            "Tier1": 0.09404000000000001,
             "Tier2": 0.09454000000000001,
-            "Tier3": 0.09504
+            "Tier3": 0.09504000000000001
           }
         },
         {
@@ -622,19 +622,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7999999999999999,
+            "LTARV": 0.725,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09654,
-            "Tier2": 0.09704,
-            "Tier3": 0.09754
+            "Tier1": 0.09654000000000001,
+            "Tier2": 0.09704000000000002,
+            "Tier3": 0.09754000000000002
           }
         },
         {
@@ -646,19 +646,19 @@
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.09904,
-            "Tier2": 0.09954,
-            "Tier3": 0.10003999999999999
+            "Tier1": 0.09904000000000002,
+            "Tier2": 0.09954000000000002,
+            "Tier3": 0.10004000000000002
           }
         },
         {
@@ -670,19 +670,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09279,
+            "Tier1": 0.09279000000000001,
             "Tier2": 0.09329000000000001,
-            "Tier3": 0.09379
+            "Tier3": 0.09379000000000001
           }
         },
         {
@@ -694,19 +694,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.75,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09279,
+            "Tier1": 0.09279000000000001,
             "Tier2": 0.09329000000000001,
-            "Tier3": 0.09379
+            "Tier3": 0.09379000000000001
           }
         },
         {
@@ -718,19 +718,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.825,
+            "LTARV": 0.75,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09529,
-            "Tier2": 0.09579,
-            "Tier3": 0.09629
+            "Tier1": 0.09529000000000001,
+            "Tier2": 0.09579000000000001,
+            "Tier3": 0.09629000000000001
           }
         },
         {
@@ -742,19 +742,19 @@
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09779,
-            "Tier2": 0.09829,
-            "Tier3": 0.09878999999999999
+            "Tier1": 0.09779000000000002,
+            "Tier2": 0.09829000000000002,
+            "Tier3": 0.09879000000000002
           }
         },
         {
@@ -766,19 +766,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09154,
+            "Tier1": 0.09154000000000001,
             "Tier2": 0.09204000000000001,
-            "Tier3": 0.09254
+            "Tier3": 0.09254000000000001
           }
         },
         {
@@ -790,19 +790,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8250000000000001,
+            "LTARV": 0.775,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09154,
+            "Tier1": 0.09154000000000001,
             "Tier2": 0.09204000000000001,
-            "Tier3": 0.09254
+            "Tier3": 0.09254000000000001
           }
         },
         {
@@ -814,19 +814,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.825,
+            "LTARV": 0.775,
+            "LTC": 0.875
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.775,
+            "LTC": 0.85
           },
           "noteRates": {
-            "Tier1": 0.09404,
+            "Tier1": 0.09404000000000001,
             "Tier2": 0.09454000000000001,
-            "Tier3": 0.09504
+            "Tier3": 0.09504000000000001
           }
         },
         {
@@ -838,19 +838,19 @@
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09654,
-            "Tier2": 0.09704,
-            "Tier3": 0.09754
+            "Tier1": 0.09654000000000001,
+            "Tier2": 0.09704000000000002,
+            "Tier3": 0.09754000000000002
           }
         },
         {
@@ -862,19 +862,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.09904,
-            "Tier2": 0.09954,
-            "Tier3": 0.10003999999999999
+            "Tier1": 0.09904000000000002,
+            "Tier2": 0.09954000000000002,
+            "Tier3": 0.10004000000000002
           }
         },
         {
@@ -886,19 +886,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.09904,
-            "Tier2": 0.09954,
-            "Tier3": 0.10003999999999999
+            "Tier1": 0.09904000000000002,
+            "Tier2": 0.09954000000000002,
+            "Tier3": 0.10004000000000002
           }
         },
         {
@@ -910,19 +910,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7749999999999999,
+            "LTARV": 0.7,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.75,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.10154,
-            "Tier2": 0.10204,
-            "Tier3": 0.10253999999999999
+            "Tier1": 0.10154000000000002,
+            "Tier2": 0.10204000000000002,
+            "Tier3": 0.10254000000000002
           }
         },
         {
@@ -944,9 +944,9 @@
             "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.10404,
-            "Tier2": 0.10454000000000001,
-            "Tier3": 0.10504
+            "Tier1": 0.10404000000000002,
+            "Tier2": 0.10454000000000002,
+            "Tier3": 0.10504000000000002
           }
         },
         {
@@ -958,19 +958,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09779,
-            "Tier2": 0.09829,
-            "Tier3": 0.09878999999999999
+            "Tier1": 0.09779000000000002,
+            "Tier2": 0.09829000000000002,
+            "Tier3": 0.09879000000000002
           }
         },
         {
@@ -982,19 +982,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09779,
-            "Tier2": 0.09829,
-            "Tier3": 0.09878999999999999
+            "Tier1": 0.09779000000000002,
+            "Tier2": 0.09829000000000002,
+            "Tier3": 0.09879000000000002
           }
         },
         {
@@ -1006,19 +1006,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7999999999999999,
+            "LTARV": 0.725,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.10029,
-            "Tier2": 0.10079,
-            "Tier3": 0.10128999999999999
+            "Tier1": 0.10029000000000002,
+            "Tier2": 0.10079000000000002,
+            "Tier3": 0.10129000000000002
           }
         },
         {
@@ -1040,9 +1040,9 @@
             "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.10278999999999999,
-            "Tier2": 0.10329,
-            "Tier3": 0.10379
+            "Tier1": 0.10279000000000002,
+            "Tier2": 0.10329000000000002,
+            "Tier3": 0.10379000000000002
           }
         },
         {
@@ -1054,19 +1054,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09654,
-            "Tier2": 0.09704,
-            "Tier3": 0.09754
+            "Tier1": 0.09654000000000001,
+            "Tier2": 0.09704000000000002,
+            "Tier3": 0.09754000000000002
           }
         },
         {
@@ -1078,19 +1078,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.8,
+            "LTARV": 0.75,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09654,
-            "Tier2": 0.09704,
-            "Tier3": 0.09754
+            "Tier1": 0.09654000000000001,
+            "Tier2": 0.09704000000000002,
+            "Tier3": 0.09754000000000002
           }
         },
         {
@@ -1102,19 +1102,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7999999999999999,
+            "LTARV": 0.75,
+            "LTC": 0.85
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.75,
+            "LTC": 0.825
           },
           "noteRates": {
-            "Tier1": 0.09904,
-            "Tier2": 0.09954,
-            "Tier3": 0.10003999999999999
+            "Tier1": 0.09904000000000002,
+            "Tier2": 0.09954000000000002,
+            "Tier3": 0.10004000000000002
           }
         },
         {
@@ -1136,9 +1136,9 @@
             "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.10154,
-            "Tier2": 0.10204,
-            "Tier3": 0.10253999999999999
+            "Tier1": 0.10154000000000002,
+            "Tier2": 0.10204000000000002,
+            "Tier3": 0.10254000000000002
           }
         },
         {
@@ -1150,19 +1150,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.10278999999999999,
-            "Tier2": 0.10329,
-            "Tier3": 0.10379
+            "Tier1": 0.10279000000000002,
+            "Tier2": 0.10329000000000002,
+            "Tier3": 0.10379000000000002
           }
         },
         {
@@ -1174,19 +1174,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.10278999999999999,
-            "Tier2": 0.10329,
-            "Tier3": 0.10379
+            "Tier1": 0.10279000000000002,
+            "Tier2": 0.10329000000000002,
+            "Tier3": 0.10379000000000002
           }
         },
         {
@@ -1198,19 +1198,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7749999999999999,
+            "LTARV": 0.7,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.75,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.10529,
-            "Tier2": 0.10579000000000001,
-            "Tier3": 0.10629
+            "Tier1": 0.10529000000000002,
+            "Tier2": 0.10579000000000002,
+            "Tier3": 0.10629000000000002
           }
         },
         {
@@ -1232,9 +1232,9 @@
             "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.10779,
-            "Tier2": 0.10829000000000001,
-            "Tier3": 0.10879
+            "Tier1": 0.10779000000000002,
+            "Tier2": 0.10829000000000003,
+            "Tier3": 0.10879000000000003
           }
         },
         {
@@ -1246,19 +1246,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.10154,
-            "Tier2": 0.10204,
-            "Tier3": 0.10253999999999999
+            "Tier1": 0.10154000000000002,
+            "Tier2": 0.10204000000000002,
+            "Tier3": 0.10254000000000002
           }
         },
         {
@@ -1270,19 +1270,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.775,
+            "LTARV": 0.725,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.10154,
-            "Tier2": 0.10204,
-            "Tier3": 0.10253999999999999
+            "Tier1": 0.10154000000000002,
+            "Tier2": 0.10204000000000002,
+            "Tier3": 0.10254000000000002
           }
         },
         {
@@ -1294,19 +1294,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7749999999999999,
+            "LTARV": 0.725,
+            "LTC": 0.825
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.75,
+            "LTARV": 0.725,
+            "LTC": 0.7999999999999999
           },
           "noteRates": {
-            "Tier1": 0.10404,
-            "Tier2": 0.10454000000000001,
-            "Tier3": 0.10504
+            "Tier1": 0.10404000000000002,
+            "Tier2": 0.10454000000000002,
+            "Tier3": 0.10504000000000002
           }
         },
         {
@@ -1328,9 +1328,9 @@
             "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.10654,
-            "Tier2": 0.10704000000000001,
-            "Tier3": 0.10754
+            "Tier1": 0.10654000000000002,
+            "Tier2": 0.10704000000000002,
+            "Tier3": 0.10754000000000002
           }
         },
         {
@@ -1342,19 +1342,19 @@
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.75,
+            "LTARV": 0.7,
+            "LTC": 0.7999999999999999
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.75,
+            "LTARV": 0.7,
+            "LTC": 0.7749999999999999
           },
           "noteRates": {
-            "Tier1": 0.10029,
-            "Tier2": 0.10079,
-            "Tier3": 0.10128999999999999
+            "Tier1": 0.10029000000000002,
+            "Tier2": 0.10079000000000002,
+            "Tier3": 0.10129000000000002
           }
         },
         {
@@ -1366,19 +1366,19 @@
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.75,
+            "LTARV": 0.6749999999999999,
+            "LTC": 0.7999999999999999
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.75,
+            "LTARV": 0.6749999999999999,
+            "LTC": 0.7749999999999999
           },
           "noteRates": {
-            "Tier1": 0.10029,
-            "Tier2": 0.10079,
-            "Tier3": 0.10128999999999999
+            "Tier1": 0.10029000000000002,
+            "Tier2": 0.10079000000000002,
+            "Tier3": 0.10129000000000002
           }
         },
         {
@@ -1390,19 +1390,19 @@
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.7499999999999999,
+            "LTARV": 0.6749999999999999,
+            "LTC": 0.7999999999999999
           },
           "refi": {
-            "LTV": null,
-            "LTARV": null,
-            "LTC": null
+            "LTV": 0.725,
+            "LTARV": 0.6749999999999999,
+            "LTC": 0.7749999999999999
           },
           "noteRates": {
-            "Tier1": 0.10278999999999999,
-            "Tier2": 0.10329,
-            "Tier3": 0.10379
+            "Tier1": 0.10279000000000002,
+            "Tier2": 0.10329000000000002,
+            "Tier3": 0.10379000000000002
           }
         },
         {
@@ -1424,9 +1424,9 @@
             "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.10529,
-            "Tier2": 0.10579000000000001,
-            "Tier3": 0.10629
+            "Tier1": 0.10529000000000002,
+            "Tier2": 0.10579000000000002,
+            "Tier3": 0.10629000000000002
           }
         }
       ]
