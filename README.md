@@ -126,6 +126,59 @@ Error response (examples):
 
 These limitations are intentional to deliver a reliable MVP for voice‑agent sizing. The API and data model are structured so we can extend coverage without breaking clients.
 
+## Borrower Personas (A, B) and Voice‑Agent Input Checklist
+
+### Personas covered in this MVP
+
+- **Borrower Level A (Experienced)**
+  - **Experience**: ≥ 7 months (from database rows)
+  - **FICO bands supported**: 740, 720, 700, 680
+  - **Typical caps (example, Purchase)**: at 740 FICO, caps often align to `LTV 85%`, `LTARV 80%`, `LTC 90%`; lower FICO bands reduce caps per pricing row
+
+- **Borrower Level B (Mid‑Experienced)**
+  - **Experience**: ≥ 5 months (from database rows)
+  - **FICO bands supported**: 740, 720, 700, 680
+  - **Typical caps**: slightly tighter than A for the same tier/FICO (see JSON rows for exact caps used by the API)
+
+Levels **C (≥ 3 months)** and **D (≥ 1 month)** will be added. Until then, callers with < 5–7 months should expect “ineligible” or “recontact” outcomes depending on FICO.
+
+### Voice‑agent input checklist (what to collect on‑call)
+
+- **Property**
+  - `propertyState` (2‑letter code; drives state tier/rate)
+  - `propertyValue` (as‑is value)
+  - `afterRepairPropertyAmount` (ARV)
+  - `purchasePrice` (if applicable)
+  - `rehabBudget`
+
+- **Borrower**
+  - `borrowerFico`
+  - `borrowerExperienceMonths` (required; min enforced is 36 months)
+  - `borrowerExperienceDeals` (optional, informational)
+
+- **Loan details**
+  - `loanPurpose` (`purchase` or `refi`)
+  - `requestedAmount` (optional; if omitted, API returns the maximum eligible sizing)
+
+### Guardrails the voice agent can communicate
+
+- ARV must be greater than rehab budget; otherwise sizing is invalid
+- ARV must be greater than current property value
+- Minimum experience of 36 months is enforced in the API today
+- FICO below pricing row minimum → ineligible; FICO < ~640 → “recontact” recommendation
+- Sizing respects the minimum/maximum loan amounts per loan‑amount tier
+
+### How the API sizes the provisional loan
+
+Given the inputs above, the API computes:
+
+- Caps from database by borrower level, FICO, loan‑amount tier, and purpose (Purchase vs Refi)
+- Constraint amounts: `byLTARV`, `byLTC`, `byLTV`
+- `maximumEligibleLoan = min(byLTARV, byLTC, byLTV)`
+- `provisionalLoanAmount = min(maximumEligibleLoan, requestedAmount || maximumEligibleLoan)`
+
+Result also includes the effective `noteRate` based on state tier (CA = Tier1, FL/GA/TX = Tier2, others = Tier3).
+
 ## State Tiers
 
 - **Tier 1**: CA (best rates)
