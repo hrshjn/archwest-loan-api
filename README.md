@@ -202,6 +202,7 @@ curl -s -X POST http://localhost:3000/api/loan-details \
 - Documented borrower personas (Levels A/B), voice-agent input checklist, and guardrails.
 - Health endpoints available: `GET /` and `GET /health`.
 - Data ingestion updated: added XLSX-based builder to extract caps/rates from original workbook (no CSV header ambiguity). A/B caps now fully populated except 1 pending source row (B, FICO 680, Tier 4), which is gated with a clear config_missing_caps outcome.
+- Data dependency: Borrower B, FICO 680, Tier 4 caps are pending confirmation from Abhiram Deshpande (Codiot). Until confirmed, this single combo is disabled via outcome=config_missing_caps to preserve accuracy.
 - Known gaps (to be added next): remaining C/D cleanup, points adjustments, judicial/non-judicial linkage, additional products (Bridge/GUC/DSCR).
 
 ---
