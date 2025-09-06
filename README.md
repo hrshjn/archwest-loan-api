@@ -220,4 +220,100 @@ curl -s -X POST http://localhost:3000/api/loan-details \
 - Health endpoints available: `GET /` and `GET /health`.
 - Known gaps (to be added next): borrower levels C/D, points adjustments, judicial/non-judicial linkage, additional products (Bridge/GUC/DSCR).
 
+---
+
+## Features (Phase 1 – Live Today)
+
+- Fix & Flip with Rehab sizing logic
+- Borrower Levels A and B (experience mins enforced)
+- Loan amount tiers 1–4 and state tier mapping (CA=Tier1; FL/GA/TX=Tier2; others=Tier3)
+- FICO banding at 740/720/700/680
+- Returns: Final Note (provisional loan), UPB @ Close, Holdback, display LTV/LTC, rate range (+30 bps), 12‑month term, outcome
+
+## Data
+
+Pricing and tiering rules are loaded from a JSON generated from Archwest’s CSV/Excel sheets:
+
+```
+archwest_fnf_database.json
+```
+
+This JSON contains:
+- Loan amount tiers (min/max)
+- FICO minimums
+- Experience requirements (A=7, B=5 in 36 months)
+- State → Tier mapping
+- Pricing rows with LTV/LTARV/LTC caps and note rates
+
+## API Usage (Sizer Endpoint)
+
+Endpoint
+
+```
+POST /v1/sizer/fixflip/quote
+```
+
+Request example
+
+```json
+{
+  "productKey": "FNF",
+  "data": {
+    "loanPurpose": "purchase",
+    "propertyState": "CA",
+    "purchasePrice": 1100000,
+    "rehabBudget": 75000,
+    "afterRepairPropertyAmount": 1400000,
+    "borrowerFico": 740,
+    "borrowerExperienceMonths": 84,
+    "borrowerLevel": "A",
+    "requestedAmount": 1200000
+  }
+}
+```
+
+Response example
+
+```json
+{
+  "ok": true,
+  "data": {
+    "qualified": true,
+    "outcome": "eligible",
+    "finalNoteAmount": 1010000,
+    "upbAtClose": 935000,
+    "holdback": 75000,
+    "displayLTV": 0.85,
+    "displayLTC": 0.9,
+    "rateLo": 0.0868,
+    "rateHi": 0.0898,
+    "termMonths": 12
+  }
+}
+```
+
+## Example Voice Agent Responses
+
+- Eligible (A/B):
+  “Based on your details, you’re eligible for a provisional loan of about $1.01M, with $935k advanced at closing and $75k reserved for rehab. Your rate is estimated between 8.7% and 9.0% for a 12‑month term.”
+
+- Recontact:
+  “You’re not eligible at this time. If your credit improves over the next six months, you may qualify. I’ll set a reminder to reach out then.”
+
+- Ineligible (state gate):
+  “We’re not able to offer a loan right now because the property state isn’t eligible for our programs.”
+
+## Next Phases
+
+- Borrower Levels C/D (less experienced) – add with full cap validation
+- Judicial vs Non‑Judicial adjustments (once rules confirmed)
+- Explicit Able‑to‑Lend flag
+- Additional products (Bridge, DSCR, GUC)
+- Pricing adjustments (origination/size/credit/tier spreads, buffers)
+- CRM integrations (Salesforce/HubSpot)
+
+## Disclaimer
+
+This API provides front‑end sizing only and is not a credit decision engine. All outputs are indicative and subject to Archwest’s final underwriting and compliance rules.
+
 
