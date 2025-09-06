@@ -115,6 +115,17 @@ Error response (examples):
 - **ineligible**: Does not qualify (see `reason` field for details like `low_fico`, `sizing_constraints`, etc.)
 - **recontact**: Borrower should be contacted later (typically FICO < 640)
 
+## Current Limitations and Rationale
+
+- Borrower Levels covered: **A and B** only. Levels **C and D** (lower experience profiles) are not yet included in the JSON dataset. Rationale: we prioritized common borrower profiles to ship a working demo quickly; C/D add 36 more rows and will be added next.
+- Product coverage: **FNF (Fix & Flip)** only. Other products referenced in the sheets (e.g., **Bridge**, **Ground-Up/GUC**, **DSCR/rental**) are not included yet. Rationale: the demo focuses on FNF sizing; adding other products requires separate parsing and validation passes.
+- Points: We apply **0.75% origination** as a constant; tiered/adjusted points (e.g., credit/size/tier adjustments) are not applied yet. Rationale: adjustment rows in the sheet (e.g., "Tier Spread", "Size Adjustment", "Credit Adjustment", "Min Spread", "Buffer") need careful handling to avoid double-counting; we will integrate once validations are in place.
+- Judicial vs Non‑Judicial: The lists CSV contains this, but it's **not yet used** for pricing/eligibility. Rationale: no explicit pricing linkage specified; we will wire this once the rule is confirmed.
+- Experience thresholds: We enforce **minimum 36 months** and use **borrowerExperienceMonths** for qualification. Deal‑count tiers from the sheet are not yet mapped to pricing changes beyond the provided rows.
+- Dataset completeness: The pricing database currently has **20 rows** (A/B across tiers and FICO bands). The source CSV contains **56 FNF rows**; the remaining will be parsed and added.
+
+These limitations are intentional to deliver a reliable MVP for voice‑agent sizing. The API and data model are structured so we can extend coverage without breaking clients.
+
 ## State Tiers
 
 - **Tier 1**: CA (best rates)
