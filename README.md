@@ -1,18 +1,10 @@
 # Archwest Loan Sizing API
 
-Express endpoint that implements Archwest Capital's Fix & Flip (FNF) loan sizing calculator with complete pricing logic.
+Express service that implements Archwest Capital's Fix & Flip (FNF) loan sizing per the internal pricing PDF and sheets. Designed for forms, CRMs, and voice agents to return a provisional loan and indicative rate range in-call.
 
 ## Overview
 
-This API provides loan eligibility and pricing calculations for Archwest Capital's Fix & Flip products. It's designed to be called by voice agents during customer conversations to provide instant loan sizing and qualification decisions.
-
-### Key Features
-- Real-time loan eligibility determination (eligible/ineligible/recontact)
-- State-based pricing tiers (CA, FL/GA/TX, others)
-- FICO and experience-based qualification
-- LTV/LTARV/LTC constraint calculations
-- Interest rate lookup from 576 pricing scenarios
-- Loan amount tiers from $150K to $5M
+Phase‑1 supports FNF with Borrower Levels A/B, state tiering, and loan amount tiers 1–4. The sizing flow is row‑driven from the pricing matrix.
 
 ## Run
 
@@ -24,29 +16,21 @@ npm run dev
 
 Server will listen on `http://localhost:3000`.
 
-## Endpoint
+## Inputs (what callers must provide)
 
-- POST `/api/loan-details`
+Required
+- productKey: "FNF"
+- data.loanPurpose: "purchase" | "refi"
+- data.propertyState: 2‑letter code (state tier)
+- data.purchasePrice (or current propertyValue for refi)
+- data.rehabBudget
+- data.afterRepairPropertyAmount (ARV)
+- data.borrowerFico
+- data.borrowerExperienceMonths
 
-Request body:
-
-```json
-{
-  "productKey": "FNF",
-  "data": {
-    "propertyState": "CA",                 // 2-letter state code
-    "purchasePrice": 2700000,              // Purchase price
-    "afterRepairPropertyAmount": 7000000,  // ARV
-    "rehabBudget": 310000,                 // Rehab amount
-    "propertyValue": 2700000,              // Current/as-is value
-    "requestedAmount": 2700000,            // Requested loan amount
-    "borrowerFico": 740,                   // FICO score
-    "borrowerExperienceMonths": 84,        // Months of experience
-    "borrowerExperienceDeals": 7,          // Number of completed deals
-    "loanPurpose": "purchase"              // "purchase" or "refi"
-  }
-}
-```
+Optional
+- data.requestedAmount (caps Final Note)
+- data.borrowerLevel (defaults to A; A/B currently supported)
 
 Success response:
 
@@ -109,22 +93,30 @@ Error response (examples):
 { "ok": false, "error": "invalid_fnf_amount", "message": "Loan amount outside acceptable range" }
 ```
 
-## Outcome Types
+## Calculation Logic (PDF sequence)
 
-- **eligible**: Borrower qualifies for the loan with calculated terms
-- **ineligible**: Does not qualify (see `reason` field for details like `low_fico`, `sizing_constraints`, etc.)
-- **recontact**: Borrower should be contacted later (typically FICO < 640)
+1. State gate: reject if state not enabled (via state tier table)
+2. Borrower level/experience screen (A/B supported; mins enforced)
+3. Choose pricing row by FICO band (highest row minFICO ≤ borrower FICO) and loan‑amount tier
+4. Purpose caps from row (Purchase vs Refi)
+   - Projected Note = min( ARV × LTARV, (Purchase + Rehab) × LTC )
+   - UPB @ Close = Purchase × LTV
+   - Final Note (provisional loan) = min( Projected Note, UPB + Rehab, RequestedAmount if provided )
+5. Snap to the row whose Min/Max contains Final Note and re‑calculate (caps, UPB, Final Note)
+6. Price by State Tier (Tier1/2/3) and display a +30 bps range
+7. Return eligibility outcome and explanation
 
-## Current Limitations and Rationale
+## Outputs (contract)
 
-- Borrower Levels covered: **A and B** only. Levels **C and D** (lower experience profiles) are not yet included in the JSON dataset. Rationale: we prioritized common borrower profiles to ship a working demo quickly; C/D add 36 more rows and will be added next.
-- Product coverage: **FNF (Fix & Flip)** only. Other products referenced in the sheets (e.g., **Bridge**, **Ground-Up/GUC**, **DSCR/rental**) are not included yet. Rationale: the demo focuses on FNF sizing; adding other products requires separate parsing and validation passes.
-- Points: We apply **0.75% origination** as a constant; tiered/adjusted points (e.g., credit/size/tier adjustments) are not applied yet. Rationale: adjustment rows in the sheet (e.g., "Tier Spread", "Size Adjustment", "Credit Adjustment", "Min Spread", "Buffer") need careful handling to avoid double-counting; we will integrate once validations are in place.
-- Judicial vs Non‑Judicial: The lists CSV contains this, but it's **not yet used** for pricing/eligibility. Rationale: no explicit pricing linkage specified; we will wire this once the rule is confirmed.
-- Experience thresholds: We enforce **minimum 36 months** and use **borrowerExperienceMonths** for qualification. Deal‑count tiers from the sheet are not yet mapped to pricing changes beyond the provided rows.
-- Dataset completeness: The pricing database currently has **20 rows** (A/B across tiers and FICO bands). The source CSV contains **56 FNF rows**; the remaining will be parsed and added.
+Always
+- ok (boolean), data.outcome: eligible | ineligible | recontact
+- data.reason when not eligible (e.g., state_not_enabled, low_fico, sizing_outside_row_range)
 
-These limitations are intentional to deliver a reliable MVP for voice‑agent sizing. The API and data model are structured so we can extend coverage without breaking clients.
+If eligible
+- data.finalNoteAmount, data.upbAtClose, data.holdback
+- data.displayLTV, data.displayLTC
+- data.rateLo, data.rateHi, data.termMonths (12)
+- data.stateTier, data.loanAmountTier
 
 ## Borrower Personas (A, B) and Voice‑Agent Input Checklist
 
@@ -179,18 +171,9 @@ Given the inputs above, the API computes:
 
 Result also includes the effective `noteRate` based on state tier (CA = Tier1, FL/GA/TX = Tier2, others = Tier3).
 
-## State Tiers
+## Example Request/Response
 
-- **Tier 1**: CA (best rates)
-- **Tier 2**: FL, GA, TX
-- **Tier 3**: All other states
-
-## Loan Amount Tiers
-
-- **Tier 1**: $150,000 - $999,999
-- **Tier 2**: $1,000,000 - $1,999,999
-- **Tier 3**: $2,000,000 - $3,499,999
-- **Tier 4**: $3,500,000 - $4,999,999
+Endpoint: `POST /v1/sizer/fixflip/quote`
 
 ## Quick test
 
@@ -303,14 +286,13 @@ Response example
 - Ineligible (state gate):
   “We’re not able to offer a loan right now because the property state isn’t eligible for our programs.”
 
-## Next Phases
+## Future Enhancements
 
-- Borrower Levels C/D (less experienced) – add with full cap validation
-- Judicial vs Non‑Judicial adjustments (once rules confirmed)
-- Explicit Able‑to‑Lend flag
-- Additional products (Bridge, DSCR, GUC)
-- Pricing adjustments (origination/size/credit/tier spreads, buffers)
-- CRM integrations (Salesforce/HubSpot)
+- Borrower Levels C/D (with complete cap validation).
+- Judicial vs Non‑Judicial and explicit Able‑to‑Lend integration (single policy section).
+- Additional products (Bridge, DSCR, GUC).
+- Pricing adjustments (origination/size/credit/tier spreads, buffers).
+- CRM integrations (Salesforce/HubSpot).
 
 ## Disclaimer
 
