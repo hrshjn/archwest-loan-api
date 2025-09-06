@@ -7,6 +7,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// New sizer route (purpose-aware caps, UPB/holdback, final note re-selection)
+try {
+    const { quoteFNF } = require('./src/sizer/fnf');
+    app.post('/v1/sizer/fixflip/quote', (req, res) => {
+        try {
+            const result = quoteFNF(pricingDatabase, req.body || {});
+            return res.json(result);
+        } catch (e) {
+            return res.status(400).json({ ok:false, error: e.message });
+        }
+    });
+} catch {}
+
 // Load Archwest pricing database
 const pricingDatabase = JSON.parse(
 	fs.readFileSync(path.join(__dirname, 'archwest_fnf_database.json'), 'utf8')

@@ -209,3 +209,15 @@ curl -s -X POST http://localhost:3000/api/loan-details \
 ```
 
 
+## Update Log
+
+- Added new purpose-aware sizer endpoint: `POST /v1/sizer/fixflip/quote`.
+  - Implements PDF sequence: Projected Note (min of LTARV and LTC), UPB @ close via LTV, Final Note = min(Projected, UPB+Rehab), re-selects pricing row by Final Note, and prices by State Tier with a +0.30% range.
+  - Returns: `projectedNote`, `upbAtClose`, `holdback`, `finalNoteAmount`, `displayLTV`, `displayLTC`, `rateLo`, `rateHi`, `termMonths`, `stateTier`, `loanAmountTier`, `caps`.
+- Added `src/sizer/fnf.js` sizing module (purchase/refi caps, UPB/holdback, snap-to-row, rate range).
+- Kept existing endpoint `POST /api/loan-details` (basic sizing) for backward compatibility.
+- Documented borrower personas (Levels A/B), voice-agent input checklist, and guardrails.
+- Health endpoints available: `GET /` and `GET /health`.
+- Known gaps (to be added next): borrower levels C/D, points adjustments, judicial/non-judicial linkage, additional products (Bridge/GUC/DSCR).
+
+
