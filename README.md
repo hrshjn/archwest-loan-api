@@ -2,6 +2,18 @@
 
 Express endpoint that implements Archwest Capital's Fix & Flip (FNF) loan sizing calculator with complete pricing logic.
 
+## Overview
+
+This API provides loan eligibility and pricing calculations for Archwest Capital's Fix & Flip products. It's designed to be called by voice agents during customer conversations to provide instant loan sizing and qualification decisions.
+
+### Key Features
+- Real-time loan eligibility determination (eligible/ineligible/recontact)
+- State-based pricing tiers (CA, FL/GA/TX, others)
+- FICO and experience-based qualification
+- LTV/LTARV/LTC constraint calculations
+- Interest rate lookup from 576 pricing scenarios
+- Loan amount tiers from $150K to $5M
+
 ## Run
 
 ```bash
