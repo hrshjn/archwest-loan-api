@@ -55,6 +55,43 @@ def load_existing_db():
     with open(DB_PATH,'r') as f:
         return json.load(f)
 
+def find_header_indexes(rows):
+    header_idx = None
+    for i,row in enumerate(rows):
+        if 'Product' in row and 'Borrower Level' in row:
+            header_idx = i
+            break
+    if header_idx is None:
+        return None
+    hdr = rows[header_idx]
+    def find_col(label):
+        for j,cell in enumerate(hdr):
+            if str(cell).strip() == label:
+                return j
+        for j,cell in enumerate(hdr):
+            if label in str(cell):
+                return j
+        return None
+    return {
+        'row': header_idx,
+        'product': find_col('Product'),
+        'level': find_col('Borrower Level'),
+        'minExp': find_col('Min. Experience 36 mos.'),
+        'minFico': find_col('Min. FICO:'),
+        'loanAmountTier': find_col('Loan Amount Tier'),
+        'minLoan': find_col('Min. Loan:'),
+        'maxLoan': find_col('Max. Loan:'),
+        'purchaseLTV': find_col('Purchase LTV'),
+        'purchaseLTARV': find_col('Purchase LTARV'),
+        'purchaseLTC': find_col('Purchase LTC'),
+        'refiLTV': find_col('Refinance LF RehabLTV'),
+        'refiLTARV': find_col('Refinance LF RehabLTARV'),
+        'refiLTC': find_col('Refinance LF RehabLTC'),
+        'tier1': find_col('Tier 1'),
+        'tier2': find_col('Tier 2'),
+        'tier3': find_col('Tier 3')
+    }
+
 def main():
     db = load_existing_db()
 
@@ -67,81 +104,80 @@ def main():
 
     pricing_rows = []
 
+    # Load all rows first to identify header columns
     with open(CSV_PATH, newline='') as f:
-        reader = csv.reader(f)
-        for row in reader:
-            # Find FNF rows: look for the literal 'FNF' and a borrower level token (A/B/C/D)
-            if 'FNF' not in row: continue
-            try:
-                idx = row.index('FNF')
-            except ValueError:
-                continue
-            if idx+8 >= len(row):
-                continue
-            borrowerLevel = (row[idx+1] or '').strip()
-            if borrowerLevel not in ('A','B','C','D'):
-                continue
-            try:
-                minExperienceMonths = int(str(row[idx+2]).strip() or '0')
-            except:
-                minExperienceMonths = 0
-            try:
-                minFico = int(str(row[idx+4]).strip() or '0')
-            except:
-                continue
-            # Some rows may have '#N/A' qualificationKey at idx+5
-            try:
-                loanAmountTier = int(str(row[idx+7]).strip())
-            except:
-                continue
-            minLoan = parse_money(row[idx+8])
-            maxLoan = parse_money(row[idx+9])
-            if not (minLoan and maxLoan):
-                continue
+        all_rows = list(csv.reader(f))
 
-            # Extract all percentage tokens from the row to find caps and rates
-            pcts = [parse_pct(v) for v in row if isinstance(v,str) and v.strip().endswith('%')]
-            if not pcts:
-                continue
-            # Identify purchase/refi triplets by aligning with known A row pattern
-            purchase_ix = find_triplet_indices(pcts, known_purchase)
-            refi_ix     = find_triplet_indices(pcts, known_refi)
-            if purchase_ix is None or refi_ix is None:
-                # Can't align, skip this row
-                continue
-            purchase = {
-                'LTV':   pcts[purchase_ix+0],
-                'LTARV': pcts[purchase_ix+1],
-                'LTC':   pcts[purchase_ix+2],
-            }
-            refi = {
-                'LTV':   pcts[refi_ix+0],
-                'LTARV': pcts[refi_ix+1],
-                'LTC':   pcts[refi_ix+2],
-            }
-            # Rates: compress duplicate pairs and take three that look like 8–11%
+    hdr = find_header_indexes(all_rows) or {}
+    pidx = hdr.get('product'); lvl = hdr.get('level'); expi = hdr.get('minExp'); fic = hdr.get('minFico')
+    tier = hdr.get('loanAmountTier'); minL = hdr.get('minLoan'); maxL = hdr.get('maxLoan')
+    pLTV = hdr.get('purchaseLTV'); pARV = hdr.get('purchaseLTARV'); pLTC = hdr.get('purchaseLTC')
+    rLTV = hdr.get('refiLTV'); rARV = hdr.get('refiLTARV'); rLTC = hdr.get('refiLTC')
+    t1 = hdr.get('tier1'); t2 = hdr.get('tier2'); t3 = hdr.get('tier3')
+
+    for row in all_rows:
+        if pidx is None or pidx >= len(row):
+            continue
+        if (row[pidx] or '').strip() != 'FNF':
+            continue
+        borrowerLevel = (row[lvl] if lvl is not None and lvl < len(row) else '').strip()
+        if borrowerLevel not in ('A','B','C','D'):
+            continue
+        try:
+            minExperienceMonths = int(str(row[expi]).strip()) if expi is not None and expi < len(row) else 0
+        except Exception:
+            minExperienceMonths = 0
+        try:
+            minFico = int(str(row[fic]).strip()) if fic is not None and fic < len(row) else 0
+        except Exception:
+            continue
+        try:
+            loanAmountTier = int(str(row[tier]).strip()) if tier is not None and tier < len(row) else None
+        except Exception:
+            loanAmountTier = None
+        if not loanAmountTier:
+            continue
+        minLoan = parse_money(row[minL]) if minL is not None and minL < len(row) else None
+        maxLoan = parse_money(row[maxL]) if maxL is not None and maxL < len(row) else None
+        if not (minLoan and maxLoan):
+            continue
+
+        purchase = {
+            'LTV':   parse_pct(row[pLTV]) if pLTV is not None and pLTV < len(row) else None,
+            'LTARV': parse_pct(row[pARV]) if pARV is not None and pARV < len(row) else None,
+            'LTC':   parse_pct(row[pLTC]) if pLTC is not None and pLTC < len(row) else None,
+        }
+        refi = {
+            'LTV':   parse_pct(row[rLTV]) if rLTV is not None and rLTV < len(row) else None,
+            'LTARV': parse_pct(row[rARV]) if rARV is not None and rARV < len(row) else None,
+            'LTC':   parse_pct(row[rLTC]) if rLTC is not None and rLTC < len(row) else None,
+        }
+
+        # Note rates from explicit Tier columns if present; else fallback to scanning percentages near end
+        noteRates = None
+        if t1 is not None and t2 is not None and t3 is not None and max(t1,t2,t3) < len(row):
+            r1 = parse_pct(row[t1]); r2 = parse_pct(row[t2]); r3 = parse_pct(row[t3])
+            if r1 and r2 and r3:
+                noteRates = { 'Tier1': r1, 'Tier2': r2, 'Tier3': r3 }
+        if not noteRates:
+            pcts = extract_percentages(row)
             rate_candidates = [x for x in pcts if x and 0.05 <= x <= 0.15]
-            rates = compress_rate_pairs(rate_candidates)[:3]
-            noteRates = None
-            if len(rates) >= 3:
-                noteRates = {
-                    'Tier1': rates[0],
-                    'Tier2': rates[1],
-                    'Tier3': rates[2],
-                }
+            rates = compress_rate_pairs(rate_candidates)[-3:]
+            if len(rates) == 3:
+                noteRates = { 'Tier1': rates[0], 'Tier2': rates[1], 'Tier3': rates[2] }
 
-            pricing_rows.append({
-                'product':'FNF',
-                'borrowerLevel': borrowerLevel,
-                'minExperienceMonths': minExperienceMonths,
-                'minFico': minFico,
-                'loanAmountTier': loanAmountTier,
-                'minLoan': minLoan,
-                'maxLoan': maxLoan,
-                'purchase': purchase,
-                'refi': refi,
-                'noteRates': noteRates
-            })
+        pricing_rows.append({
+            'product':'FNF',
+            'borrowerLevel': borrowerLevel,
+            'minExperienceMonths': minExperienceMonths,
+            'minFico': minFico,
+            'loanAmountTier': loanAmountTier,
+            'minLoan': minLoan,
+            'maxLoan': maxLoan,
+            'purchase': purchase,
+            'refi': refi,
+            'noteRates': noteRates
+        })
 
     # Merge with existing rows, de-duplicate by (level, fico, tier)
     def key(r):

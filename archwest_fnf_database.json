@@ -27,7 +27,9 @@
       ],
       "experience_requirements_months": {
         "A": 7,
-        "B": 5
+        "B": 5,
+        "C": 3,
+        "D": 1
       },
       "state_tiers": {
         "AL": 3,
@@ -87,139 +89,19 @@
           "product": "FNF",
           "borrowerLevel": "A",
           "minExperienceMonths": 7,
-          "minFico": 740,
-          "loanAmountTier": 4,
-          "minLoan": 3500000.0,
-          "maxLoan": 4999999.0,
-          "purchase": {
-            "LTV": 0.825,
-            "LTARV": 0.775,
-            "LTC": 0.85
-          },
-          "refi": {
-            "LTV": 0.75,
-            "LTARV": 0.775,
-            "LTC": 0.85
-          },
-          "noteRates": {
-            "Tier1": 0.09154,
-            "Tier2": 0.09204000000000001,
-            "Tier3": 0.09254
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 740,
-          "loanAmountTier": 3,
-          "minLoan": 2000000.0,
-          "maxLoan": 3499999.0,
-          "purchase": {
-            "LTV": 0.85,
-            "LTARV": 0.8,
-            "LTC": 0.9
-          },
-          "refi": {
-            "LTV": 0.775,
-            "LTARV": 0.775,
-            "LTC": 0.875
-          },
-          "noteRates": {
-            "Tier1": 0.08904,
-            "Tier2": 0.08954000000000001,
-            "Tier3": 0.09004
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 740,
-          "loanAmountTier": 2,
-          "minLoan": 1000000.0,
-          "maxLoan": 1999999.0,
-          "purchase": {
-            "LTV": 0.85,
-            "LTARV": 0.8,
-            "LTC": 0.9
-          },
-          "refi": {
-            "LTV": 0.8,
-            "LTARV": 0.8,
-            "LTC": 0.875
-          },
-          "noteRates": {
-            "Tier1": 0.08654,
-            "Tier2": 0.08704,
-            "Tier3": 0.08753999999999999
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 740,
+          "minFico": 680,
           "loanAmountTier": 1,
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": 0.85,
-            "LTARV": 0.8,
-            "LTC": 0.9
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.8,
-            "LTARV": 0.8,
-            "LTC": 0.875
-          },
-          "noteRates": {
-            "Tier1": 0.08654,
-            "Tier2": 0.08704,
-            "Tier3": 0.08753999999999999
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 720,
-          "loanAmountTier": 4,
-          "minLoan": 3500000.0,
-          "maxLoan": 4999999.0,
-          "purchase": {
-            "LTV": 0.825,
-            "LTARV": 0.75,
-            "LTC": 0.85
-          },
-          "refi": {
-            "LTV": 0.75,
-            "LTARV": 0.75,
-            "LTC": 0.85
-          },
-          "noteRates": {
-            "Tier1": 0.09279,
-            "Tier2": 0.09329000000000001,
-            "Tier3": 0.09379
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 720,
-          "loanAmountTier": 3,
-          "minLoan": 2000000.0,
-          "maxLoan": 3499999.0,
-          "purchase": {
-            "LTV": 0.85,
-            "LTARV": 0.775,
-            "LTC": 0.9
-          },
-          "refi": {
-            "LTV": 0.775,
-            "LTARV": 0.775,
-            "LTC": 0.875
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
             "Tier1": 0.09029,
@@ -231,144 +113,48 @@
           "product": "FNF",
           "borrowerLevel": "A",
           "minExperienceMonths": 7,
-          "minFico": 720,
+          "minFico": 680,
           "loanAmountTier": 2,
           "minLoan": 1000000.0,
           "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": 0.85,
-            "LTARV": 0.775,
-            "LTC": 0.9
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.8,
-            "LTARV": 0.8,
-            "LTC": 0.875
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.08778999999999999,
-            "Tier2": 0.08829000000000001,
-            "Tier3": 0.08879
+            "Tier1": 0.09029,
+            "Tier2": 0.09079000000000001,
+            "Tier3": 0.09129
           }
         },
         {
           "product": "FNF",
           "borrowerLevel": "A",
           "minExperienceMonths": 7,
-          "minFico": 720,
-          "loanAmountTier": 1,
-          "minLoan": 150000.0,
-          "maxLoan": 999999.0,
-          "purchase": {
-            "LTV": 0.85,
-            "LTARV": 0.8,
-            "LTC": 0.9
-          },
-          "refi": {
-            "LTV": 0.8,
-            "LTARV": 0.8,
-            "LTC": 0.875
-          },
-          "noteRates": {
-            "Tier1": 0.08778999999999999,
-            "Tier2": 0.08829000000000001,
-            "Tier3": 0.08879
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 700,
-          "loanAmountTier": 4,
-          "minLoan": 3500000.0,
-          "maxLoan": 4999999.0,
-          "purchase": {
-            "LTV": 0.8,
-            "LTARV": 0.725,
-            "LTC": 0.825
-          },
-          "refi": {
-            "LTV": 0.725,
-            "LTARV": 0.725,
-            "LTC": 0.825
-          },
-          "noteRates": {
-            "Tier1": 0.09404,
-            "Tier2": 0.09454000000000001,
-            "Tier3": 0.09504
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 700,
+          "minFico": 680,
           "loanAmountTier": 3,
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": 0.825,
-            "LTARV": 0.75,
-            "LTC": 0.875
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.75,
-            "LTARV": 0.75,
-            "LTC": 0.85
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.09154,
-            "Tier2": 0.09204000000000001,
-            "Tier3": 0.09254
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 700,
-          "loanAmountTier": 2,
-          "minLoan": 1000000.0,
-          "maxLoan": 1999999.0,
-          "purchase": {
-            "LTV": 0.825,
-            "LTARV": 0.75,
-            "LTC": 0.875
-          },
-          "refi": {
-            "LTV": 0.775,
-            "LTARV": 0.775,
-            "LTC": 0.85
-          },
-          "noteRates": {
-            "Tier1": 0.08904,
-            "Tier2": 0.08954000000000001,
-            "Tier3": 0.09004
-          }
-        },
-        {
-          "product": "FNF",
-          "borrowerLevel": "A",
-          "minExperienceMonths": 7,
-          "minFico": 700,
-          "loanAmountTier": 1,
-          "minLoan": 150000.0,
-          "maxLoan": 999999.0,
-          "purchase": {
-            "LTV": 0.825,
-            "LTARV": 0.775,
-            "LTC": 0.875
-          },
-          "refi": {
-            "LTV": 0.775,
-            "LTARV": 0.775,
-            "LTC": 0.85
-          },
-          "noteRates": {
-            "Tier1": 0.08904,
-            "Tier2": 0.08954000000000001,
-            "Tier3": 0.09004
+            "Tier1": 0.09279,
+            "Tier2": 0.09329000000000001,
+            "Tier3": 0.09379
           }
         },
         {
@@ -380,14 +166,14 @@
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": 0.775,
-            "LTARV": 0.7,
-            "LTC": 0.8
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.7,
-            "LTARV": 0.7,
-            "LTC": 0.8
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
             "Tier1": 0.09529,
@@ -399,19 +185,187 @@
           "product": "FNF",
           "borrowerLevel": "A",
           "minExperienceMonths": 7,
-          "minFico": 680,
+          "minFico": 700,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.08904,
+            "Tier2": 0.08954000000000001,
+            "Tier3": 0.09004
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 700,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.08904,
+            "Tier2": 0.08954000000000001,
+            "Tier3": 0.09004
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 700,
           "loanAmountTier": 3,
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": 0.8,
-            "LTARV": 0.725,
-            "LTC": 0.85
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.725,
-            "LTARV": 0.725,
-            "LTC": 0.825
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09154,
+            "Tier2": 0.09204000000000001,
+            "Tier3": 0.09254
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 700,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09404,
+            "Tier2": 0.09454000000000001,
+            "Tier3": 0.09504
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 720,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.08778999999999999,
+            "Tier2": 0.08829000000000001,
+            "Tier3": 0.08879
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 720,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.08778999999999999,
+            "Tier2": 0.08829000000000001,
+            "Tier3": 0.08879
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 720,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09029,
+            "Tier2": 0.09079000000000001,
+            "Tier3": 0.09129
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 720,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
             "Tier1": 0.09279,
@@ -423,67 +377,259 @@
           "product": "FNF",
           "borrowerLevel": "A",
           "minExperienceMonths": 7,
-          "minFico": 680,
-          "loanAmountTier": 2,
-          "minLoan": 1000000.0,
-          "maxLoan": 1999999.0,
+          "minFico": 740,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
           "purchase": {
-            "LTV": 0.8,
-            "LTARV": 0.725,
-            "LTC": 0.85
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.75,
-            "LTARV": 0.75,
-            "LTC": 0.825
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.09029,
-            "Tier2": 0.09079000000000001,
-            "Tier3": 0.09129
+            "Tier1": 0.08654,
+            "Tier2": 0.08704,
+            "Tier3": 0.08753999999999999
           }
         },
         {
           "product": "FNF",
           "borrowerLevel": "A",
           "minExperienceMonths": 7,
-          "minFico": 680,
-          "loanAmountTier": 1,
-          "minLoan": 150000.0,
-          "maxLoan": 999999.0,
+          "minFico": 740,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
           "purchase": {
-            "LTV": 0.8,
-            "LTARV": 0.75,
-            "LTC": 0.85
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.75,
-            "LTARV": 0.75,
-            "LTC": 0.825
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.09029,
-            "Tier2": 0.09079000000000001,
-            "Tier3": 0.09129
+            "Tier1": 0.08654,
+            "Tier2": 0.08704,
+            "Tier3": 0.08753999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 740,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.08904,
+            "Tier2": 0.08954000000000001,
+            "Tier3": 0.09004
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "A",
+          "minExperienceMonths": 7,
+          "minFico": 740,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09154,
+            "Tier2": 0.09204000000000001,
+            "Tier3": 0.09254
           }
         },
         {
           "product": "FNF",
           "borrowerLevel": "B",
           "minExperienceMonths": 5,
-          "minFico": 740,
+          "minFico": 680,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09529,
+            "Tier2": 0.09579,
+            "Tier3": 0.09629
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 680,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09529,
+            "Tier2": 0.09579,
+            "Tier3": 0.09629
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 680,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09779,
+            "Tier2": 0.09829,
+            "Tier3": 0.09878999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 680,
           "loanAmountTier": 4,
           "minLoan": 3500000.0,
           "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": 0.8,
-            "LTARV": 0.75,
-            "LTC": 0.825
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.725,
-            "LTARV": 0.75,
-            "LTC": 0.825
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10029,
+            "Tier2": 0.10079,
+            "Tier3": 0.10128999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 700,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09404,
+            "Tier2": 0.09454000000000001,
+            "Tier3": 0.09504
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 700,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09404,
+            "Tier2": 0.09454000000000001,
+            "Tier3": 0.09504
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 700,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
             "Tier1": 0.09654,
@@ -495,19 +641,187 @@
           "product": "FNF",
           "borrowerLevel": "B",
           "minExperienceMonths": 5,
+          "minFico": 700,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09904,
+            "Tier2": 0.09954,
+            "Tier3": 0.10003999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 720,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09279,
+            "Tier2": 0.09329000000000001,
+            "Tier3": 0.09379
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 720,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09279,
+            "Tier2": 0.09329000000000001,
+            "Tier3": 0.09379
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 720,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09529,
+            "Tier2": 0.09579,
+            "Tier3": 0.09629
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 720,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09779,
+            "Tier2": 0.09829,
+            "Tier3": 0.09878999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 740,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09154,
+            "Tier2": 0.09204000000000001,
+            "Tier3": 0.09254
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
+          "minFico": 740,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09154,
+            "Tier2": 0.09204000000000001,
+            "Tier3": 0.09254
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "B",
+          "minExperienceMonths": 5,
           "minFico": 740,
           "loanAmountTier": 3,
           "minLoan": 2000000.0,
           "maxLoan": 3499999.0,
           "purchase": {
-            "LTV": 0.825,
-            "LTARV": 0.775,
-            "LTC": 0.875
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.75,
-            "LTARV": 0.75,
-            "LTC": 0.85
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
             "Tier1": 0.09404,
@@ -520,47 +834,599 @@
           "borrowerLevel": "B",
           "minExperienceMonths": 5,
           "minFico": 740,
-          "loanAmountTier": 2,
-          "minLoan": 1000000.0,
-          "maxLoan": 1999999.0,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
           "purchase": {
-            "LTV": 0.825,
-            "LTARV": 0.775,
-            "LTC": 0.875
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.775,
-            "LTARV": 0.775,
-            "LTC": 0.85
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.09154,
-            "Tier2": 0.09204000000000001,
-            "Tier3": 0.09254
+            "Tier1": 0.09654,
+            "Tier2": 0.09704,
+            "Tier3": 0.09754
           }
         },
         {
           "product": "FNF",
-          "borrowerLevel": "B",
-          "minExperienceMonths": 5,
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 700,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09904,
+            "Tier2": 0.09954,
+            "Tier3": 0.10003999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 700,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09904,
+            "Tier2": 0.09954,
+            "Tier3": 0.10003999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 700,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10154,
+            "Tier2": 0.10204,
+            "Tier3": 0.10253999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 700,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10404,
+            "Tier2": 0.10454000000000001,
+            "Tier3": 0.10504
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 720,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09779,
+            "Tier2": 0.09829,
+            "Tier3": 0.09878999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 720,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09779,
+            "Tier2": 0.09829,
+            "Tier3": 0.09878999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 720,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10029,
+            "Tier2": 0.10079,
+            "Tier3": 0.10128999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 720,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10278999999999999,
+            "Tier2": 0.10329,
+            "Tier3": 0.10379
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
           "minFico": 740,
           "loanAmountTier": 1,
           "minLoan": 150000.0,
           "maxLoan": 999999.0,
           "purchase": {
-            "LTV": 0.825,
-            "LTARV": 0.775,
-            "LTC": 0.875
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "refi": {
-            "LTV": 0.775,
-            "LTARV": 0.775,
-            "LTC": 0.85
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
           },
           "noteRates": {
-            "Tier1": 0.09154,
-            "Tier2": 0.09204000000000001,
-            "Tier3": 0.09254
+            "Tier1": 0.09654,
+            "Tier2": 0.09704,
+            "Tier3": 0.09754
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 740,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09654,
+            "Tier2": 0.09704,
+            "Tier3": 0.09754
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 740,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.09904,
+            "Tier2": 0.09954,
+            "Tier3": 0.10003999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "C",
+          "minExperienceMonths": 3,
+          "minFico": 740,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10154,
+            "Tier2": 0.10204,
+            "Tier3": 0.10253999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 700,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10278999999999999,
+            "Tier2": 0.10329,
+            "Tier3": 0.10379
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 700,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10278999999999999,
+            "Tier2": 0.10329,
+            "Tier3": 0.10379
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 700,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10529,
+            "Tier2": 0.10579000000000001,
+            "Tier3": 0.10629
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 700,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10779,
+            "Tier2": 0.10829000000000001,
+            "Tier3": 0.10879
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 720,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10154,
+            "Tier2": 0.10204,
+            "Tier3": 0.10253999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 720,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10154,
+            "Tier2": 0.10204,
+            "Tier3": 0.10253999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 720,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10404,
+            "Tier2": 0.10454000000000001,
+            "Tier3": 0.10504
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 720,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10654,
+            "Tier2": 0.10704000000000001,
+            "Tier3": 0.10754
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 740,
+          "loanAmountTier": 1,
+          "minLoan": 150000.0,
+          "maxLoan": 999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10029,
+            "Tier2": 0.10079,
+            "Tier3": 0.10128999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 740,
+          "loanAmountTier": 2,
+          "minLoan": 1000000.0,
+          "maxLoan": 1999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10029,
+            "Tier2": 0.10079,
+            "Tier3": 0.10128999999999999
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 740,
+          "loanAmountTier": 3,
+          "minLoan": 2000000.0,
+          "maxLoan": 3499999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10278999999999999,
+            "Tier2": 0.10329,
+            "Tier3": 0.10379
+          }
+        },
+        {
+          "product": "FNF",
+          "borrowerLevel": "D",
+          "minExperienceMonths": 1,
+          "minFico": 740,
+          "loanAmountTier": 4,
+          "minLoan": 3500000.0,
+          "maxLoan": 4999999.0,
+          "purchase": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "refi": {
+            "LTV": null,
+            "LTARV": null,
+            "LTC": null
+          },
+          "noteRates": {
+            "Tier1": 0.10529,
+            "Tier2": 0.10579000000000001,
+            "Tier3": 0.10629
           }
         }
       ]
