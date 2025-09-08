@@ -19,6 +19,7 @@ Server will listen on `http://localhost:3000`.
 ## Inputs (what callers must provide)
 
 Required
+
 - productKey: "FNF"
 - data.loanPurpose: "purchase" | "refi"
 - data.propertyState: 2‑letter code (state tier)
@@ -29,6 +30,7 @@ Required
 - data.borrowerExperienceMonths
 
 Optional
+
 - data.requestedAmount (caps Final Note)
 - data.borrowerLevel (defaults to A; A/B currently supported)
 
@@ -109,10 +111,12 @@ Error response (examples):
 ## Outputs (contract)
 
 Always
+
 - ok (boolean), data.outcome: eligible | ineligible | recontact
 - data.reason when not eligible (e.g., state_not_enabled, low_fico, sizing_outside_row_range)
 
 If eligible
+
 - data.finalNoteAmount, data.upbAtClose, data.holdback
 - data.displayLTV, data.displayLTC
 - data.rateLo, data.rateHi, data.termMonths (12)
@@ -123,6 +127,7 @@ If eligible
 ### Personas covered in this MVP
 
 - **Borrower Level A (Experienced)**
+
   - **Experience**: ≥ 7 months (from database rows)
   - **FICO bands supported**: 740, 720, 700, 680
   - **Typical caps (example, Purchase)**: at 740 FICO, caps often align to `LTV 85%`, `LTARV 80%`, `LTC 90%`; lower FICO bands reduce caps per pricing row
@@ -137,6 +142,7 @@ Levels **C (≥ 3 months)** and **D (≥ 1 month)** will be added. Until then, c
 ### Voice‑agent input checklist (what to collect on‑call)
 
 - **Property**
+
   - `propertyState` (2‑letter code; drives state tier/rate)
   - `propertyValue` (as‑is value)
   - `afterRepairPropertyAmount` (ARV)
@@ -144,6 +150,7 @@ Levels **C (≥ 3 months)** and **D (≥ 1 month)** will be added. Until then, c
   - `rehabBudget`
 
 - **Borrower**
+
   - `borrowerFico`
   - `borrowerExperienceMonths` (required; min enforced is 36 months)
   - `borrowerExperienceDeals` (optional, informational)
@@ -178,19 +185,23 @@ Endpoint: `POST /v1/sizer/fixflip/quote`
 ## Quick test
 
 ```bash
-curl -s -X POST http://localhost:3000/api/loan-details \
+curl -s -X POST http://localhost:3000/v1/sizer/fixflip/quote \
   -H 'Content-Type: application/json' \
   -d '{
-    "productKey": "fix_and_flip",
-    "data": {
-      "afterRepairPropertyAmount": 500000,
-      "rehabBudget": 100000,
-      "propertyValue": 300000,
-      "requestedAmount": 250000
-    }
-  }' | jq
+  "productKey": "FNF",
+  "data": {
+    "loanPurpose": "purchase",
+    "propertyState": "CA",
+    "purchasePrice": 1100000,
+    "rehabBudget": 75000,
+    "afterRepairPropertyAmount": 1400000,
+    "borrowerFico": 740,
+    "borrowerExperienceMonths": 84,
+    "borrowerLevel": "A",
+    "requestedAmount": 1200000
+  }
+}'
 ```
-
 
 ## Update Log
 
@@ -224,6 +235,7 @@ archwest_fnf_database.json
 ```
 
 This JSON contains:
+
 - Loan amount tiers (min/max)
 - FICO minimums
 - Experience requirements (A=7, B=5 in 36 months)
@@ -265,14 +277,29 @@ Response example
   "data": {
     "qualified": true,
     "outcome": "eligible",
-    "finalNoteAmount": 1010000,
-    "upbAtClose": 935000,
-    "holdback": 75000,
-    "displayLTV": 0.85,
-    "displayLTC": 0.9,
-    "rateLo": 0.0868,
-    "rateHi": 0.0898,
-    "termMonths": 12
+    "productKey": "FNF",
+    "purpose": "purchase",
+    "stateTier": "1",
+    "loanAmountTier": "1",
+    "qualificationKey": null,
+    "caps": {
+      "purchase": {
+        "LTV": "0.8"
+      },
+      "both": {
+        "LTARV": "0.75",
+        "LTC": "0.85"
+      }
+    },
+    "projectedNote": "998000",
+    "upbAtClose": "880000",
+    "holdback": "75000",
+    "finalNoteAmount": "955000",
+    "displayLTV": "0.8",
+    "displayLTC": "0.8127659574468085",
+    "rateLo": "0.09029000000000001",
+    "rateHi": "0.09329000000000001",
+    "termMonths": "12"
   }
 }
 ```
@@ -299,5 +326,3 @@ Response example
 ## Disclaimer
 
 This API provides front‑end sizing only and is not a credit decision engine. All outputs are indicative and subject to Archwest’s final underwriting and compliance rules.
-
-
