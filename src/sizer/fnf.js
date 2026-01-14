@@ -2,6 +2,20 @@
 const MONEY = n => Math.floor(Number(n || 0));
 const pct = v => (v == null ? null : Number(v)); // already 0–1 in JSON
 
+// Normalize US state input: accepts full state name or 2-letter postal code
+const STATE_NAME_TO_CODE = {
+	'ALABAMA':'AL','ALASKA':'AK','ARIZONA':'AZ','ARKANSAS':'AR','CALIFORNIA':'CA','COLORADO':'CO','CONNECTICUT':'CT','DELAWARE':'DE','FLORIDA':'FL','GEORGIA':'GA','HAWAII':'HI','IDAHO':'ID','ILLINOIS':'IL','INDIANA':'IN','IOWA':'IA','KANSAS':'KS','KENTUCKY':'KY','LOUISIANA':'LA','MAINE':'ME','MARYLAND':'MD','MASSACHUSETTS':'MA','MICHIGAN':'MI','MINNESOTA':'MN','MISSISSIPPI':'MS','MISSOURI':'MO','MONTANA':'MT','NEBRASKA':'NE','NEVADA':'NV','NEW HAMPSHIRE':'NH','NEW JERSEY':'NJ','NEW MEXICO':'NM','NEW YORK':'NY','NORTH CAROLINA':'NC','NORTH DAKOTA':'ND','OHIO':'OH','OKLAHOMA':'OK','OREGON':'OR','PENNSYLVANIA':'PA','RHODE ISLAND':'RI','SOUTH CAROLINA':'SC','SOUTH DAKOTA':'SD','TENNESSEE':'TN','TEXAS':'TX','UTAH':'UT','VERMONT':'VT','VIRGINIA':'VA','WASHINGTON':'WA','WEST VIRGINIA':'WV','WISCONSIN':'WI','WYOMING':'WY','DISTRICT OF COLUMBIA':'DC','WASHINGTON DC':'DC','WASHINGTON, DC':'DC','DC':'DC'
+};
+function normalizeStateCode(input){
+	if(!input) return null;
+	const s = String(input).trim().toUpperCase();
+	if(s.length===2) return s;
+	if(STATE_NAME_TO_CODE[s]) return STATE_NAME_TO_CODE[s];
+	const SHORT = {'CALIF':'CA','PENNA':'PA','MASS':'MA','TENN':'TN','WASH':'WA'};
+	if(SHORT[s]) return SHORT[s];
+	return null;
+}
+
 function pickPurposeBlock(row, purpose) {
 	return (purpose || 'purchase').toLowerCase().startsWith('refi')
 		? row.refi
@@ -85,7 +99,7 @@ exports.quoteFNF = function quoteFNF(db, req) {
 	if ((productKey||'FNF') !== 'FNF') return { ok:false, error:'unsupported_product' };
 
 	const purpose = (data.loanPurpose || 'purchase'); // 'purchase' | 'refi'
-	const state   = data.propertyState;
+	const state   = normalizeStateCode(data.propertyState);
 	const ARV     = MONEY(data.afterRepairPropertyAmount || data.afterRepairValue || 0);
 	const purchase= MONEY(data.purchasePrice || data.propertyValue || 0);
 	const rehab   = MONEY(data.rehabBudget || 0);
@@ -93,7 +107,7 @@ exports.quoteFNF = function quoteFNF(db, req) {
 
 	// 0) State gate
 	if (!ableToLend(db, state)) {
-		return { ok:true, data:{ qualified:false, outcome:'ineligible', reason:'state_not_enabled', state } };
+		return { ok:true, data:{ qualified:false, outcome:'ineligible', reason:'state_not_enabled', state: state || data.propertyState } };
 	}
 	const stTier = stateTier(db, state);
 
