@@ -1,0 +1,19 @@
+{
+  "name": "sales-crm-backend",
+  "version": "1.0.0",
+  "description": "Sales CRM backend with Sybill integration",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "init-db": "node db/init.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "uuid": "^11.0.4"
+  }
+}
