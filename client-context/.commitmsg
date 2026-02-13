@@ -1,0 +1,12 @@
+Update client context files across accounts (Feb 9-11)
+
+Major updates:
+- vodafone-idea: Full email thread sync (Telephone Integration + Interaction with Vi threads), WhatsApp legal status update, integration now code-complete but calls not connecting (Prutech investigating), new contacts (Rehan Khatib, Shambhavi QA), earlier thread history backfilled (Dec 2025 - Jan 2026)
+- yuverse-neysa: Updated context and partnership details
+- five9, pine-labs, paypal, hp-retail-edge, new-york-life, orient-electric: Context refreshes
+
+New client context files:
+- acefone, ai-espresso-labs, bluip, directo, federal-bank, fidelity, jana-bank, pramerica-life, readymode, rivvi-ai, rocketlane, utkarsh-small-finance-bank, vonage
+
+New product docs:
+- smallest/electron-slm: SLM product context (v1 with eval data, v2 marketing-aligned)
