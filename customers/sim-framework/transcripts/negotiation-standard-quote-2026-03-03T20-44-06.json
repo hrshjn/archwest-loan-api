@@ -1,0 +1,46 @@
+{
+  "scenario": "negotiation-standard-quote",
+  "agentId": "69a74753b42c1648e0f8c4d9",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "Hi, we're looking at using Smallest AI for automated collections calls in India. About 200,000 calls per month, average 3 minutes each. What would that cost?",
+      "ts": 1772570554436
+    },
+    {
+      "role": "agent",
+      "text": "That sounds like a great use case for our platform. For 200,000 calls per month in India",
+      "ts": 1772570555248
+    },
+    {
+      "role": "agent",
+      "text": "Hello! This is the Commercial desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. What can I do for you today?",
+      "ts": 1772570555656
+    },
+    {
+      "role": "agent",
+      "text": "Hello! This is the Commercial desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. What can I do for you today?",
+      "ts": 1772570555658
+    },
+    {
+      "role": "user",
+      "text": "How does that compare to ElevenLabs?",
+      "ts": 1772570555750
+    },
+    {
+      "role": "agent",
+      "text": "ElevenLabs is a great competitor, but our pricing is significantly more competitive. At volume, we are 72-80% cheaper than ElevenLabs. For example, their business plan is $1,320/month plus per-minute charges, while we offer a much lower base cost without any monthly minimums. For your 200,000 calls in India, would you like me to give you the specific cost breakdown for our full Atoms platform?",
+      "ts": 1772570557218
+    },
+    {
+      "role": "user",
+      "text": "Can you do better on the price?",
+      "ts": 1772570557719
+    },
+    {
+      "role": "agent",
+      "text": "I can certainly look into that for you. Our standard volume discount for 200,000 minutes per month is 15-45% off the base rate. To see if we can go further, are you looking for a specific target price, or would you be open to committing to a longer contract term?",
+      "ts": 1772570558778
+    }
+  ]
+}

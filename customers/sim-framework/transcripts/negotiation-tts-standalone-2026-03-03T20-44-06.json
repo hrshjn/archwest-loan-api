@@ -1,0 +1,31 @@
+{
+  "scenario": "negotiation-tts-standalone",
+  "agentId": "69a74753b42c1648e0f8c4d9",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "We just need TTS, not the full agent. What's Lightning V3.1 pricing for 1 million minutes per month?",
+      "ts": 1772570605319
+    },
+    {
+      "role": "agent",
+      "text": "Hello! This is the commercial desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. How can I assist you today?",
+      "ts": 1772570605482
+    },
+    {
+      "role": "agent",
+      "text": "For 1 million minutes per month of Lightning V3.1 TTS, the rate would be $0.014 per minute. That comes to approximately $14,000 per month. Does that volume work for you?",
+      "ts": 1772570606429
+    },
+    {
+      "role": "user",
+      "text": "That's interesting. What about for the US market — any surcharge?",
+      "ts": 1772570606930
+    },
+    {
+      "role": "agent",
+      "text": "For the US market, there is a location surcharge of $0.06 per minute on top of the base price. So, with that added, the total would be approximately $0.074 per minute. That brings the monthly cost to around $74,000. Does that fit your budget?",
+      "ts": 1772570607964
+    }
+  ]
+}

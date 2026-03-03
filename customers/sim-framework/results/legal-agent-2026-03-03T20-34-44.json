@@ -1,0 +1,451 @@
+{
+  "agent": {
+    "id": "69a744f8bd1bc2da08fcc214",
+    "name": "Legal Coordination Desk"
+  },
+  "timestamp": "2026-03-03T20:34:44.377Z",
+  "summary": {
+    "totalChecks": 17,
+    "totalPassed": 17,
+    "totalRequiredFails": 0,
+    "score": "100%"
+  },
+  "scenarios": [
+    {
+      "id": "legal-nda-process",
+      "name": "Standard NDA inquiry — process and timeline",
+      "disconnected": true,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "Hi, this is Ravi from HDFC Bank procurement. We need to set up an NDA with Smallest AI.",
+          "ts": 1772569980758
+        },
+        {
+          "role": "agent",
+          "text": "Hi Ravi, thanks for calling the Legal Coordination Desk at Smallest AI. I can certainly help you get that NDA process started. Since you're with HDFC Bank, would",
+          "ts": 1772569981788
+        },
+        {
+          "role": "agent",
+          "text": "Hello! This is the Legal Coordination Desk at Smallest AI. I can help you with our standard NDAs, MSAs, or vendor registration. How can I assist you today?",
+          "ts": 1772569982030
+        },
+        {
+          "role": "agent",
+          "text": "Hello! This is the Legal Coordination Desk at Smallest AI. I can help you with our standard NDAs, MSAs, or vendor registration. How can I assist you today?",
+          "ts": 1772569982031
+        },
+        {
+          "role": "user",
+          "text": "What's your standard NDA process?",
+          "ts": 1772569982289
+        },
+        {
+          "role": "agent",
+          "text": "Our standard NDA process is quite efficient. We use a mutual NDA as our standard, and we typically sign it before any technical discussions or data sharing begin. Here is how it works: First, you can send your NDA to legal@smallest.ai, or we can send you our standard template. One of our legal team members, Manjari, will review it. If there are any edits, she will send you a version with tracked changes. Once we agree on the final text, our CTO, Akshay, will sign it, and then you can counter-sign. We aim to have the NDA executed within one week of initiation. Does that sound good to you?",
+          "ts": 1772569984110
+        },
+        {
+          "role": "user",
+          "text": "How long does it typically take?",
+          "ts": 1772569984611
+        },
+        {
+          "role": "agent",
+          "text": "We aim to have the NDA executed within one week from when we receive your request. The legal review itself typically takes about two business days. So, once you send the NDA to us, we'll get it to you for signature within that timeframe. Does that work for your schedule?",
+          "ts": 1772569985569
+        },
+        {
+          "role": "user",
+          "text": "Who would be the signatory from your side?",
+          "ts": 1772569986071
+        },
+        {
+          "role": "agent",
+          "text": "Our CTO, Akshay, is the primary signatory for NDAs. He handles these directly to keep the process moving quickly. Would you like me to send our standard NDA template to you now so you can start the review?",
+          "ts": 1772569986921
+        },
+        {
+          "role": "user",
+          "text": "Great, we'll send our template to legal@smallest.ai. Thanks.",
+          "ts": 1772569987421
+        },
+        {
+          "role": "agent",
+          "text": "Thank you, Ravi. We'll look out for that template at legal@smallest.ai. Have a great day!",
+          "ts": 1772569988179
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "explains_nda_process",
+            "description": "explains_nda_process",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Our standard NDA process is quite efficient. We use a mutual NDA as our standard, and we typically sign it before any te"
+          },
+          {
+            "id": "gives_timeline",
+            "description": "gives_timeline",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Our standard NDA process is quite efficient. We use a mutual NDA as our standard, and we typically sign it before any te"
+          },
+          {
+            "id": "names_signatory",
+            "description": "names_signatory",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Our standard NDA process is quite efficient. We use a mutual NDA as our standard, and we typically sign it before any te"
+          },
+          {
+            "id": "confirms_email",
+            "description": "confirms_email",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Our standard NDA process is quite efficient. We use a mutual NDA as our standard, and we typically sign it before any te"
+          }
+        ],
+        "total": 4,
+        "passed": 4,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "legal-msa-clauses",
+      "name": "MSA clause questions — liability and data",
+      "disconnected": true,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "Hi, I'm reviewing the MSA terms for Smallest AI. I have a few questions.",
+          "ts": 1772570000640
+        },
+        {
+          "role": "agent",
+          "text": "Hello, this is the Legal Coordination Desk at Smallest AI. How can I help you with your legal process today?",
+          "ts": 1772570000852
+        },
+        {
+          "role": "agent",
+          "text": "I can certainly help with that. What specific questions do you have about the MSA terms?",
+          "ts": 1772570001305
+        },
+        {
+          "role": "user",
+          "text": "What's your standard position on liability caps?",
+          "ts": 1772570001354
+        },
+        {
+          "role": "agent",
+          "text": "Our standard position is that liability is capped at the fees paid by the client in the preceding 12 months. We do not accept unlimited liability.",
+          "ts": 1772570002023
+        },
+        {
+          "role": "user",
+          "text": "And what about data processing? Do you use our data for training?",
+          "ts": 1772570002525
+        },
+        {
+          "role": "agent",
+          "text": "No, we do not use customer data to train our models. We process your data strictly for the delivery of the service.",
+          "ts": 1772570003152
+        },
+        {
+          "role": "user",
+          "text": "We need unlimited liability for data breaches. Is that possible?",
+          "ts": 1772570003654
+        },
+        {
+          "role": "agent",
+          "text": "I cannot agree to unlimited liability. For any modifications to our standard terms, please reach out to Manjari at legal@smallest.ai, and she can connect you with our legal team for review.",
+          "ts": 1772570004437
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "liability_cap_answer",
+            "description": "liability_cap_answer",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Our standard position is that liability is capped at the fees paid by the client in the preceding 12 months. We do not a"
+          },
+          {
+            "id": "denies_training_data",
+            "description": "denies_training_data",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Our standard position is that liability is capped at the fees paid by the client in the preceding 12 months. We do not a"
+          },
+          {
+            "id": "escalates_on_unlimited",
+            "description": "escalates_on_unlimited",
+            "required": true,
+            "pass": true,
+            "matchedIn": "I cannot agree to unlimited liability. For any modifications to our standard terms, please reach out to Manjari at legal"
+          }
+        ],
+        "total": 3,
+        "passed": 3,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "legal-vendor-registration",
+      "name": "Vendor registration — what docs do you provide?",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "Hello, we're onboarding Smallest AI as a vendor. What documents can you provide?",
+          "ts": 1772570017430
+        },
+        {
+          "role": "agent",
+          "text": "Hello, this is the Legal Coordination Assistant for Smallest AI. I can help you with our standard NDAs, MSAs, or vendor registration. How can I assist you today?",
+          "ts": 1772570017635
+        },
+        {
+          "role": "agent",
+          "text": "Great, I can help with that. For vendor registration, we typically provide the Company Registration Certificate, Certificate of Incorporation, GST Certificate, PAN card, Board Resolution, Bank Details, ISO 27001 certificate, SOC 2 Type II report, and our Company Profile. To get this started, could you please share your company name?",
+          "ts": 1772570018756
+        },
+        {
+          "role": "user",
+          "text": "Do you have ISO certification?",
+          "ts": 1772570019257
+        },
+        {
+          "role": "agent",
+          "text": "Yes, we have ISO 27001 certification, which is currently valid. We can share the certificate directly. To get the full vendor registration package sent over to you, could you please share your company name?",
+          "ts": 1772570019966
+        },
+        {
+          "role": "user",
+          "text": "We also need your GST and PAN details.",
+          "ts": 1772570020468
+        },
+        {
+          "role": "agent",
+          "text": "We can definitely provide those. The legal team can send over the complete vendor registration package, which includes the GST and PAN details, along with the other documents I mentioned. To make sure it goes to the right place, could you please share your company name?",
+          "ts": 1772570021808
+        },
+        {
+          "role": "user",
+          "text": "How quickly can you send all this?",
+          "ts": 1772570022311
+        },
+        {
+          "role": "agent",
+          "text": "The legal team can compile and send the package within 2 business days once we have your company name. Could you please share your company name so I can get this started for you?",
+          "ts": 1772570023057
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "lists_standard_docs",
+            "description": "lists_standard_docs",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Great, I can help with that. For vendor registration, we typically provide the Company Registration Certificate, Certifi"
+          },
+          {
+            "id": "confirms_iso",
+            "description": "confirms_iso",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Great, I can help with that. For vendor registration, we typically provide the Company Registration Certificate, Certifi"
+          },
+          {
+            "id": "confirms_gst_pan",
+            "description": "confirms_gst_pan",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Great, I can help with that. For vendor registration, we typically provide the Company Registration Certificate, Certifi"
+          },
+          {
+            "id": "gives_timeline",
+            "description": "gives_timeline",
+            "required": true,
+            "pass": true,
+            "matchedIn": "The legal team can compile and send the package within 2 business days once we have your company name. Could you please "
+          }
+        ],
+        "total": 4,
+        "passed": 4,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "legal-pricing-redirect",
+      "name": "Caller asks about pricing (out of scope)",
+      "disconnected": true,
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is the Legal Coordination Assistant at Smallest AI. I can help you with our NDAs, MSAs, or vendor registration. How can I assist you today?",
+          "ts": 1772570035361
+        },
+        {
+          "role": "user",
+          "text": "Hi, I want to know your pricing per minute for voice AI.",
+          "ts": 1772570035735
+        },
+        {
+          "role": "agent",
+          "text": "I don't have access to specific pricing or commercial details here. For pricing on our voice AI, you'll need to reach out to our sales team. I can help you with legal agreements like NDAs or MSAs if you're ready for those. Would you like to proceed with a legal process?",
+          "ts": 1772570036988
+        },
+        {
+          "role": "user",
+          "text": "Ok, then who handles NDA execution?",
+          "ts": 1772570037491
+        },
+        {
+          "role": "agent",
+          "text": "NDA execution is handled by our legal team. You can send your NDA or our standard template to legal@smallest.ai, and Manjari will review it within two business days. Would you like to send an NDA over?",
+          "ts": 1772570038311
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "redirects_pricing",
+            "description": "redirects_pricing",
+            "required": true,
+            "pass": true,
+            "matchedIn": "I don't have access to specific pricing or commercial details here. For pricing on our voice AI, you'll need to reach ou"
+          },
+          {
+            "id": "answers_nda_when_asked",
+            "description": "answers_nda_when_asked",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Hello! This is the Legal Coordination Assistant at Smallest AI. I can help you with our NDAs, MSAs, or vendor registrati"
+          }
+        ],
+        "total": 2,
+        "passed": 2,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "legal-urgent-deal-blocker",
+      "name": "Caller says legal is blocking their deal — urgent",
+      "disconnected": true,
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello, this is the Legal Coordination Assistant for Smallest AI. I can help you with NDAs, MSAs, or vendor registration. How can I assist you today?",
+          "ts": 1772570050554
+        },
+        {
+          "role": "user",
+          "text": "Hi, this is urgent. We've been waiting 3 weeks for NDA counter-signature from your side. The deal is stalled.",
+          "ts": 1772570051071
+        },
+        {
+          "role": "agent",
+          "text": "I understand this is urgent, and I apologize for the delay. To check the status of that NDA, could you please provide the name of your company?",
+          "ts": 1772570052023
+        },
+        {
+          "role": "user",
+          "text": "This is for TVS Credit.",
+          "ts": 1772570052526
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "empathizes",
+            "description": "empathizes",
+            "required": true,
+            "pass": true,
+            "matchedIn": "I understand this is urgent, and I apologize for the delay. To check the status of that NDA, could you please provide th"
+          },
+          {
+            "id": "asks_company_name",
+            "description": "Agent should identify the company before looking up status",
+            "required": false,
+            "pass": null,
+            "note": "Manual review needed — no regex pattern defined"
+          },
+          {
+            "id": "escalates_urgently",
+            "description": "escalates_urgently",
+            "required": true,
+            "pass": true,
+            "matchedIn": "I understand this is urgent, and I apologize for the delay. To check the status of that NDA, could you please provide th"
+          }
+        ],
+        "total": 2,
+        "passed": 2,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "legal-esign-process",
+      "name": "Indian bank asks about Aadhaar E-Sign",
+      "disconnected": true,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "We use Aadhaar-based E-Sign for all vendor NDAs. Can Smallest AI support that?",
+          "ts": 1772570077060
+        },
+        {
+          "role": "agent",
+          "text": "Hello, this is the Legal Coordination Assistant for Smallest AI. I can help you with NDAs, MSAs, or vendor registration. How can I assist you today?",
+          "ts": 1772570077265
+        },
+        {
+          "role": "user",
+          "text": "What signatory details do we need from your side for E-Sign?",
+          "ts": 1772570077768
+        },
+        {
+          "role": "agent",
+          "text": "Yes, we absolutely support Aadhaar-based E-Sign for Indian banking clients. You can send the NDA to legal@smallest.ai",
+          "ts": 1772570077810
+        },
+        {
+          "role": "agent",
+          "text": "For E-Sign, we typically require the signatory's Aadhaar number, mobile number, and a One-Time Password (OTP). We can also use a DocuSign or Adobe Sign link if that works better for your team.",
+          "ts": 1772570078601
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "confirms_esign",
+            "description": "confirms_esign",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Yes, we absolutely support Aadhaar-based E-Sign for Indian banking clients. You can send the NDA to legal@smallest.ai"
+          },
+          {
+            "id": "lists_details",
+            "description": "lists_details",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Yes, we absolutely support Aadhaar-based E-Sign for Indian banking clients. You can send the NDA to legal@smallest.ai"
+          }
+        ],
+        "total": 2,
+        "passed": 2,
+        "score": "100",
+        "requiredFails": []
+      }
+    }
+  ]
+}

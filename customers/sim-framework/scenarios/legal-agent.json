@@ -1,0 +1,98 @@
+{
+  "agentId": "69a744f8bd1bc2da08fcc214",
+  "agentName": "Legal Coordination Desk",
+  "scenarios": [
+    {
+      "id": "legal-nda-process",
+      "name": "Standard NDA inquiry — process and timeline",
+      "persona": "Procurement officer from a large bank",
+      "messages": [
+        "Hi, this is Ravi from HDFC Bank procurement. We need to set up an NDA with Smallest AI.",
+        "What's your standard NDA process?",
+        "How long does it typically take?",
+        "Who would be the signatory from your side?",
+        "Great, we'll send our template to legal@smallest.ai. Thanks."
+      ],
+      "expectedBehaviors": [
+        { "check": "explains_nda_process", "pattern": "mutual|NDA.*first|legal@smallest.ai", "required": true },
+        { "check": "gives_timeline", "pattern": "1 week|2 business days|within.*week", "required": true },
+        { "check": "names_signatory", "pattern": "Akshay|CTO", "required": true },
+        { "check": "confirms_email", "pattern": "legal@smallest.ai", "required": true }
+      ]
+    },
+    {
+      "id": "legal-msa-clauses",
+      "name": "MSA clause questions — liability and data",
+      "persona": "Legal counsel from insurance company",
+      "messages": [
+        "Hi, I'm reviewing the MSA terms for Smallest AI. I have a few questions.",
+        "What's your standard position on liability caps?",
+        "And what about data processing? Do you use our data for training?",
+        "We need unlimited liability for data breaches. Is that possible?"
+      ],
+      "expectedBehaviors": [
+        { "check": "liability_cap_answer", "pattern": "12 months|fees paid", "required": true },
+        { "check": "denies_training_data", "pattern": "do NOT|do not.*use.*customer.*data.*train", "required": true },
+        { "check": "escalates_on_unlimited", "pattern": "Manjari|legal.*team|legal@smallest.ai|modify", "required": true }
+      ]
+    },
+    {
+      "id": "legal-vendor-registration",
+      "name": "Vendor registration — what docs do you provide?",
+      "persona": "Vendor onboarding manager at Vodafone Idea",
+      "messages": [
+        "Hello, we're onboarding Smallest AI as a vendor. What documents can you provide?",
+        "Do you have ISO certification?",
+        "We also need your GST and PAN details.",
+        "How quickly can you send all this?"
+      ],
+      "expectedBehaviors": [
+        { "check": "lists_standard_docs", "pattern": "company registration|certificate of incorporation|board resolution", "required": true },
+        { "check": "confirms_iso", "pattern": "ISO.*27001|QCC/CADD/1224", "required": true },
+        { "check": "confirms_gst_pan", "pattern": "GST|PAN", "required": true },
+        { "check": "gives_timeline", "pattern": "2 business days|3.*5 business days", "required": true }
+      ]
+    },
+    {
+      "id": "legal-pricing-redirect",
+      "name": "Caller asks about pricing (out of scope)",
+      "persona": "Confused procurement person asking legal desk about pricing",
+      "messages": [
+        "Hi, I want to know your pricing per minute for voice AI.",
+        "Ok, then who handles NDA execution?"
+      ],
+      "expectedBehaviors": [
+        { "check": "redirects_pricing", "pattern": "sales|pricing.*team|commercial|connect", "required": true },
+        { "check": "answers_nda_when_asked", "pattern": "NDA|Manjari|legal@smallest.ai", "required": true }
+      ]
+    },
+    {
+      "id": "legal-urgent-deal-blocker",
+      "name": "Caller says legal is blocking their deal — urgent",
+      "persona": "Frustrated enterprise buyer",
+      "messages": [
+        "Hi, this is urgent. We've been waiting 3 weeks for NDA counter-signature from your side. The deal is stalled.",
+        "This is for TVS Credit.",
+        "We need it resolved today."
+      ],
+      "expectedBehaviors": [
+        { "check": "empathizes", "pattern": "understand|time-sensitive|frustrat|urgent", "required": true },
+        { "check": "asks_company_name", "description": "Agent should identify the company before looking up status", "required": false },
+        { "check": "escalates_urgently", "pattern": "Manjari|4 hours|urgent|expedite|flag", "required": true }
+      ]
+    },
+    {
+      "id": "legal-esign-process",
+      "name": "Indian bank asks about Aadhaar E-Sign",
+      "persona": "Federal Bank compliance team",
+      "messages": [
+        "We use Aadhaar-based E-Sign for all vendor NDAs. Can Smallest AI support that?",
+        "What signatory details do we need from your side for E-Sign?"
+      ],
+      "expectedBehaviors": [
+        { "check": "confirms_esign", "pattern": "Aadhaar.*E-Sign|support|accommodate", "required": true },
+        { "check": "lists_details", "pattern": "name|designation|PAN|address|legal@smallest.ai", "required": true }
+      ]
+    }
+  ]
+}

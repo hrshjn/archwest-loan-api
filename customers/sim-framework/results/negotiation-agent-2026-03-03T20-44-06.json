@@ -1,0 +1,385 @@
+{
+  "agent": {
+    "id": "69a74753b42c1648e0f8c4d9",
+    "name": "Commercial Desk (Negotiating Agent)"
+  },
+  "timestamp": "2026-03-03T20:44:06.035Z",
+  "summary": {
+    "totalChecks": 15,
+    "totalPassed": 15,
+    "totalRequiredFails": 0,
+    "score": "100%"
+  },
+  "scenarios": [
+    {
+      "id": "negotiation-standard-quote",
+      "name": "Standard pricing inquiry — Atoms agent for India",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "Hi, we're looking at using Smallest AI for automated collections calls in India. About 200,000 calls per month, average 3 minutes each. What would that cost?",
+          "ts": 1772570554436
+        },
+        {
+          "role": "agent",
+          "text": "That sounds like a great use case for our platform. For 200,000 calls per month in India",
+          "ts": 1772570555248
+        },
+        {
+          "role": "agent",
+          "text": "Hello! This is the Commercial desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. What can I do for you today?",
+          "ts": 1772570555656
+        },
+        {
+          "role": "agent",
+          "text": "Hello! This is the Commercial desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. What can I do for you today?",
+          "ts": 1772570555658
+        },
+        {
+          "role": "user",
+          "text": "How does that compare to ElevenLabs?",
+          "ts": 1772570555750
+        },
+        {
+          "role": "agent",
+          "text": "ElevenLabs is a great competitor, but our pricing is significantly more competitive. At volume, we are 72-80% cheaper than ElevenLabs. For example, their business plan is $1,320/month plus per-minute charges, while we offer a much lower base cost without any monthly minimums. For your 200,000 calls in India, would you like me to give you the specific cost breakdown for our full Atoms platform?",
+          "ts": 1772570557218
+        },
+        {
+          "role": "user",
+          "text": "Can you do better on the price?",
+          "ts": 1772570557719
+        },
+        {
+          "role": "agent",
+          "text": "I can certainly look into that for you. Our standard volume discount for 200,000 minutes per month is 15-45% off the base rate. To see if we can go further, are you looking for a specific target price, or would you be open to committing to a longer contract term?",
+          "ts": 1772570558778
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "quotes_per_minute_rate",
+            "description": "quotes_per_minute_rate",
+            "required": true,
+            "pass": true,
+            "matchedIn": "ElevenLabs is a great competitor, but our pricing is significantly more competitive. At volume, we are 72-80% cheaper th"
+          },
+          {
+            "id": "quotes_monthly_total",
+            "description": "quotes_monthly_total",
+            "required": true,
+            "pass": true,
+            "matchedIn": "That sounds like a great use case for our platform. For 200,000 calls per month in India"
+          },
+          {
+            "id": "competitive_positioning",
+            "description": "competitive_positioning",
+            "required": true,
+            "pass": true,
+            "matchedIn": "ElevenLabs is a great competitor, but our pricing is significantly more competitive. At volume, we are 72-80% cheaper th"
+          },
+          {
+            "id": "asks_for_commitment",
+            "description": "asks_for_commitment",
+            "required": false,
+            "pass": true,
+            "matchedIn": "Hello! This is the Commercial desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. What can I "
+          }
+        ],
+        "total": 4,
+        "passed": 4,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "negotiation-below-floor",
+      "name": "Client pushes below minimum price — should escalate",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is the commercial desk at Smallest AI. I'm an AI assistant here to help with pricing and quotes. Are you looking for standard pricing or something specific for a project?",
+          "ts": 1772570570912
+        },
+        {
+          "role": "user",
+          "text": "I need Atoms pricing for 500K minutes per month.",
+          "ts": 1772570571539
+        },
+        {
+          "role": "agent",
+          "text": "Got it, 500K minutes per month. To give you the exact rate, I need to know which deployment you're looking for—cloud, VPC, or on-prem?",
+          "ts": 1772570572957
+        },
+        {
+          "role": "user",
+          "text": "Our budget is $0.02 per minute. Can you match that?",
+          "ts": 1772570573459
+        },
+        {
+          "role": "agent",
+          "text": "That is right at our pricing floor for the 500K band. To get that rate, I'd need to confirm your deployment type—cloud, VPC, or on-prem?",
+          "ts": 1772570574250
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "quotes_500k",
+            "description": "quotes_500k",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Got it, 500K minutes per month. To give you the exact rate, I need to know which deployment you're looking for—cloud, VP"
+          },
+          {
+            "id": "escalates_below_floor",
+            "description": "escalates_below_floor",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Got it, 500K minutes per month. To give you the exact rate, I need to know which deployment you're looking for—cloud, VP"
+          }
+        ],
+        "total": 2,
+        "passed": 2,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "negotiation-poc-terms",
+      "name": "Client asks about POC pricing and terms",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "We're interested but want to start with a POC. What are your trial terms?",
+          "ts": 1772570587088
+        },
+        {
+          "role": "agent",
+          "text": "Hello! This is the Commercial desk at Smallest AI. I'm an AI assistant here to help with your pricing and commercial inquiries. How can I assist you today?",
+          "ts": 1772570587822
+        },
+        {
+          "role": "agent",
+          "text": "Great. We can definitely set up a Proof of Concept for you. Our standard POC typically runs for 2 to 4 weeks. The cost for the scope of work is generally between $1,000 and $2,500. We'd define specific success criteria upfront, like automation rate and latency, and any data from the POC is deleted within 30 days of completion. Does that sound like the right starting point for you?",
+          "ts": 1772570589583
+        },
+        {
+          "role": "user",
+          "text": "What happens with our data after the POC?",
+          "ts": 1772570590083
+        },
+        {
+          "role": "agent",
+          "text": "All data collected during the POC is deleted within 30 days of the project completion. We take data privacy very seriously, so we ensure nothing is retained after that period. Does that help clarify things for you?",
+          "ts": 1772570590913
+        },
+        {
+          "role": "user",
+          "text": "If the POC is successful, what's the path to production?",
+          "ts": 1772570591415
+        },
+        {
+          "role": "agent",
+          "text": "If the POC is successful, it typically converts directly into a full Master Service Agreement and commercial contract. We would then move your deployment into production, and the data from the POC phase is deleted as mentioned. Does that sound like a good process for your team?",
+          "ts": 1772570592338
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "quotes_poc_cost",
+            "description": "quotes_poc_cost",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Great. We can definitely set up a Proof of Concept for you. Our standard POC typically runs for 2 to 4 weeks. The cost f"
+          },
+          {
+            "id": "data_deletion",
+            "description": "data_deletion",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Great. We can definitely set up a Proof of Concept for you. Our standard POC typically runs for 2 to 4 weeks. The cost f"
+          },
+          {
+            "id": "mentions_msa",
+            "description": "mentions_msa",
+            "required": true,
+            "pass": true,
+            "matchedIn": "If the POC is successful, it typically converts directly into a full Master Service Agreement and commercial contract. W"
+          }
+        ],
+        "total": 3,
+        "passed": 3,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "negotiation-tts-standalone",
+      "name": "Client wants standalone TTS pricing",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "We just need TTS, not the full agent. What's Lightning V3.1 pricing for 1 million minutes per month?",
+          "ts": 1772570605319
+        },
+        {
+          "role": "agent",
+          "text": "Hello! This is the commercial desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. How can I assist you today?",
+          "ts": 1772570605482
+        },
+        {
+          "role": "agent",
+          "text": "For 1 million minutes per month of Lightning V3.1 TTS, the rate would be $0.014 per minute. That comes to approximately $14,000 per month. Does that volume work for you?",
+          "ts": 1772570606429
+        },
+        {
+          "role": "user",
+          "text": "That's interesting. What about for the US market — any surcharge?",
+          "ts": 1772570606930
+        },
+        {
+          "role": "agent",
+          "text": "For the US market, there is a location surcharge of $0.06 per minute on top of the base price. So, with that added, the total would be approximately $0.074 per minute. That brings the monthly cost to around $74,000. Does that fit your budget?",
+          "ts": 1772570607964
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "quotes_tts_rate",
+            "description": "quotes_tts_rate",
+            "required": true,
+            "pass": true,
+            "matchedIn": "For 1 million minutes per month of Lightning V3.1 TTS, the rate would be $0.014 per minute. That comes to approximately "
+          },
+          {
+            "id": "mentions_us_surcharge",
+            "description": "mentions_us_surcharge",
+            "required": true,
+            "pass": true,
+            "matchedIn": "For the US market, there is a location surcharge of $0.06 per minute on top of the base price. So, with that added, the "
+          }
+        ],
+        "total": 2,
+        "passed": 2,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "negotiation-on-prem",
+      "name": "Client asks about on-prem pricing",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "We need on-prem deployment. What are your per-minute rates for 50 million minutes per year?",
+          "ts": 1772570621741
+        },
+        {
+          "role": "agent",
+          "text": "Hello! This is the commercial desk at Smallest AI. I can help you with standard pricing, volume quotes, and POC terms. What can I do for you today?",
+          "ts": 1772570621978
+        },
+        {
+          "role": "agent",
+          "text": "For on-prem deployment, our Growth tier applies at 50 million minutes per year. The rates would be:\n Speech-to-Text: ₹0.18 per minute\n Text-to-Speech: ₹0.90 per minute Would you like to hear about our concurrency surcharges or deployment terms?",
+          "ts": 1772570623054
+        },
+        {
+          "role": "user",
+          "text": "And what's the minimum volume commitment?",
+          "ts": 1772570623555
+        },
+        {
+          "role": "agent",
+          "text": "For the Growth tier, the minimum volume commitment is 20 million minutes per year. Since you're looking at 50 million minutes, you would be comfortably above that threshold. Would you like to discuss the deployment or data handling terms?",
+          "ts": 1772570624424
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "quotes_on_prem_tier",
+            "description": "quotes_on_prem_tier",
+            "required": true,
+            "pass": true,
+            "matchedIn": "For on-prem deployment, our Growth tier applies at 50 million minutes per year. The rates would be:\n Speech-to-Text: ₹0."
+          },
+          {
+            "id": "mentions_minimum",
+            "description": "mentions_minimum",
+            "required": true,
+            "pass": true,
+            "matchedIn": "For the Growth tier, the minimum volume commitment is 20 million minutes per year. Since you're looking at 50 million mi"
+          }
+        ],
+        "total": 2,
+        "passed": 2,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "negotiation-legal-redirect",
+      "name": "Client asks about SLA and contract terms",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is the Commercial Desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. How can I assist you today?",
+          "ts": 1772570636877
+        },
+        {
+          "role": "user",
+          "text": "What's your SLA for uptime?",
+          "ts": 1772570637004
+        },
+        {
+          "role": "agent",
+          "text": "For standard commercial contracts, we offer a 99.9% uptime SLA. For custom SLAs or specific requirements, our legal team handles those terms directly. Would you like to proceed with the standard SLA, or would you prefer to discuss something more specific?",
+          "ts": 1772570638107
+        },
+        {
+          "role": "user",
+          "text": "We need 99.99% uptime guaranteed in the contract. Can you commit to that?",
+          "ts": 1772570638610
+        },
+        {
+          "role": "agent",
+          "text": "That level of uptime is typically handled by our legal team to ensure it meets your specific requirements. I can have them reach out to discuss that with you. In the meantime, would you like to discuss the standard pricing and volume tiers?",
+          "ts": 1772570639463
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "quotes_sla",
+            "description": "quotes_sla",
+            "required": true,
+            "pass": true,
+            "matchedIn": "For standard commercial contracts, we offer a 99.9% uptime SLA. For custom SLAs or specific requirements, our legal team"
+          },
+          {
+            "id": "redirects_custom_sla",
+            "description": "redirects_custom_sla",
+            "required": true,
+            "pass": true,
+            "matchedIn": "For standard commercial contracts, we offer a 99.9% uptime SLA. For custom SLAs or specific requirements, our legal team"
+          }
+        ],
+        "total": 2,
+        "passed": 2,
+        "score": "100",
+        "requiredFails": []
+      }
+    }
+  ]
+}

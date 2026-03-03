@@ -1,0 +1,86 @@
+{
+  "agentId": "69a72063bd1bc2da08fcc1e1",
+  "agentName": "Outbound Sales Agent v2",
+  "scenarios": [
+    {
+      "id": "sales-bfsi-collections-happy",
+      "name": "BFSI prospect interested in collections — full simulation flow",
+      "persona": "Collections head at a mid-size NBFC",
+      "messages": [
+        "Hello?",
+        "Yeah, speaking. Who's this?",
+        "Hmm interesting. We do about 3000 collection calls daily, mostly manual.",
+        "Sure, show me.",
+        "Haan, bol rahi hoon.",
+        "Haan batao, kitna baaki hai?",
+        "Theek hai, link bhej do.",
+        "Done, I paid.",
+        "That was impressive. Yes, let's set up a deeper call."
+      ],
+      "expectedBehaviors": [
+        { "check": "intro_with_proof_point", "pattern": "17,000|Jaipur|NBFC|96%", "required": true },
+        { "check": "offers_simulation", "pattern": "simulation|show you|switch into|collections agent", "required": true },
+        { "check": "switches_to_hindi", "pattern": "Namaste|EMI|payment|Paytm|Neha", "required": true },
+        { "check": "mentions_emi_amount", "pattern": "29,331", "required": true },
+        { "check": "breaks_character", "pattern": "Karan|full flow|production|CRM|17,000", "required": true },
+        { "check": "books_meeting", "pattern": "calendar|email|invite|deep-dive|30.minute", "required": false }
+      ]
+    },
+    {
+      "id": "sales-busy-callback",
+      "name": "Prospect is busy, asks to call back",
+      "persona": "VP Engineering who picked up by accident",
+      "messages": [
+        "Yeah hello?",
+        "I'm in a meeting right now, can't talk.",
+        "Call me tomorrow after 3pm."
+      ],
+      "expectedBehaviors": [
+        { "check": "respects_busy", "pattern": "get it|understand|no problem|call.*back", "required": true },
+        { "check": "confirms_callback_time", "pattern": "tomorrow|3.*pm|call you", "required": true }
+      ]
+    },
+    {
+      "id": "sales-not-interested",
+      "name": "Prospect not interested at all",
+      "persona": "Someone who doesn't want cold calls",
+      "messages": [
+        "Hello?",
+        "Not interested.",
+        "No, please don't call again."
+      ],
+      "expectedBehaviors": [
+        { "check": "graceful_exit", "pattern": "no worries|understand|apologies|good day", "required": true },
+        { "check": "no_pushback_after_second_no", "description": "Agent should not push after clear second rejection", "required": true }
+      ]
+    },
+    {
+      "id": "sales-skip-simulation",
+      "name": "Prospect interested but declines simulation",
+      "persona": "Tech lead who wants facts, not demos",
+      "messages": [
+        "Hello, yes speaking.",
+        "Voice AI, interesting. We've been looking at Sarvam and ElevenLabs.",
+        "No thanks on the simulation, just tell me the specs.",
+        "Send me the case study. My email is tech@example.com"
+      ],
+      "expectedBehaviors": [
+        { "check": "respects_skip", "description": "Agent does not force simulation", "required": true },
+        { "check": "delivers_pitch", "pattern": "sub-200ms|latency|languages|17,000|34 crore", "required": true },
+        { "check": "confirms_email", "pattern": "tech@example.com|email|send", "required": true }
+      ]
+    },
+    {
+      "id": "sales-are-you-ai",
+      "name": "Prospect asks if agent is AI",
+      "persona": "Curious prospect",
+      "messages": [
+        "Hello?",
+        "Wait — are you a real person or an AI?"
+      ],
+      "expectedBehaviors": [
+        { "check": "transparent_about_ai", "pattern": "AI.*voice agent|AI.*built on|our tech|our platform", "required": true }
+      ]
+    }
+  ]
+}

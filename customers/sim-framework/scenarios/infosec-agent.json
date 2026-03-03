@@ -1,0 +1,73 @@
+{
+  "agentId": "69a730c36cd1d52771328761",
+  "agentName": "InfoSec Questionnaire Responder",
+  "scenarios": [
+    {
+      "id": "infosec-certs-happy-path",
+      "name": "Standard certification inquiry",
+      "persona": "Enterprise security analyst doing vendor evaluation",
+      "messages": [
+        "Hi, I'm Priya from HDFC Bank's infosec team. We're evaluating Smallest AI for our collections use case.",
+        "What security certifications do you hold?",
+        "Do you have PCI DSS compliance?",
+        "Can you share your SOC 2 report?",
+        "That's all for now, thanks."
+      ],
+      "expectedBehaviors": [
+        { "check": "asks_for_identity", "description": "Agent should ask for caller's name and company", "required": true },
+        { "check": "cites_iso_cert_number", "pattern": "QCC/CADD/1224", "required": true },
+        { "check": "mentions_soc2_period", "pattern": "January.*2025.*July.*2025", "required": true },
+        { "check": "confirms_pci_dss", "pattern": "PCI DSS.*[Cc]ompliant", "required": true },
+        { "check": "offers_nda_for_report", "pattern": "[Nn][Dd][Aa]|security@smallest.ai", "required": true }
+      ]
+    },
+    {
+      "id": "infosec-negative-compliance",
+      "name": "Ask about certifications we don't have",
+      "persona": "US healthcare company compliance officer",
+      "messages": [
+        "This is Mark from Anthem Health. Quick question — are you HIPAA compliant?",
+        "What about FedRAMP?",
+        "Ok, and SOC 2?"
+      ],
+      "expectedBehaviors": [
+        { "check": "denies_hipaa", "pattern": "don't hold|not.*certified|don't have", "required": true },
+        { "check": "denies_fedramp", "pattern": "don't hold|not.*certified|don't have", "required": true },
+        { "check": "offers_escalation", "pattern": "Amit|roadmap|follow up", "required": true },
+        { "check": "confirms_soc2", "pattern": "SOC 2 Type II|attested", "required": true }
+      ]
+    },
+    {
+      "id": "infosec-technical-deep-dive",
+      "name": "Deep technical questions on encryption and data handling",
+      "persona": "Client security architect",
+      "messages": [
+        "Hi, Ravi here from Vodafone. I need specifics on your encryption and data residency.",
+        "What encryption do you use for data at rest and in transit?",
+        "Where is customer data stored? Which AWS regions?",
+        "Do you use our data to train your models?",
+        "What were the findings in your last pen test?"
+      ],
+      "expectedBehaviors": [
+        { "check": "mentions_aes256", "pattern": "AES.256", "required": true },
+        { "check": "mentions_tls", "pattern": "TLS 1\\.[23]", "required": true },
+        { "check": "mentions_mumbai", "pattern": "ap-south-1|Mumbai", "required": true },
+        { "check": "denies_training_on_data", "pattern": "does NOT|do not.*use.*customer.*data.*train", "required": true },
+        { "check": "cites_pen_test_numbers", "pattern": "0 [Cc]ritical.*0 [Hh]igh.*2 [Ll]ow", "required": true }
+      ]
+    },
+    {
+      "id": "infosec-non-security-redirect",
+      "name": "Caller asks about pricing (out of scope)",
+      "persona": "Procurement manager who wandered into security line",
+      "messages": [
+        "Hi, I was told to call this number. Can you tell me about your pricing?",
+        "Ok fine. What about your ISO certification then?"
+      ],
+      "expectedBehaviors": [
+        { "check": "redirects_pricing", "pattern": "outside.*scope|sales|product team|connect", "required": true },
+        { "check": "answers_iso_when_asked", "pattern": "ISO.*27001|certified", "required": true }
+      ]
+    }
+  ]
+}

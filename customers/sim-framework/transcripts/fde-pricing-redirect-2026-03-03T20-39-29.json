@@ -1,0 +1,36 @@
+{
+  "scenario": "fde-pricing-redirect",
+  "agentId": "69a7466c030fdcfe28d982f9",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "What's your per-minute pricing for voice AI?",
+      "ts": 1772570360561
+    },
+    {
+      "role": "agent",
+      "text": "I don't have the exact pricing sheet in front of me, as rates can vary based",
+      "ts": 1772570361520
+    },
+    {
+      "role": "agent",
+      "text": "Hello, this is the Technical Integration Assistant for Smallest AI. I can help you with platform architecture, API patterns, and scoping POCs. To get us started, could you tell me a bit about your technical background?",
+      "ts": 1772570361956
+    },
+    {
+      "role": "agent",
+      "text": "Hello, this is the Technical Integration Assistant for Smallest AI. I can help you with platform architecture, API patterns, and scoping POCs. To get us started, could you tell me a bit about your technical background?",
+      "ts": 1772570361956
+    },
+    {
+      "role": "user",
+      "text": "Ok, can you tell me about the API authentication then?",
+      "ts": 1772570362022
+    },
+    {
+      "role": "agent",
+      "text": "Authentication is handled via a Bearer token. You'll need to include the header `Authorization: Bearer YOUR_API_KEY` in your requests. You can generate and manage your API keys in the Smallest AI dashboard. Does that help clarify the setup for you?",
+      "ts": 1772570362907
+    }
+  ]
+}

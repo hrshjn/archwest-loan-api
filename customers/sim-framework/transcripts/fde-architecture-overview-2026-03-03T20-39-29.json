@@ -1,0 +1,41 @@
+{
+  "scenario": "fde-architecture-overview",
+  "agentId": "69a7466c030fdcfe28d982f9",
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hello! This is the Technical Support Assistant for Smallest AI. I'm here to help you understand our platform and get your integration set up. To start, could you tell me a bit about your technical background and what you're looking to build today?",
+      "ts": 1772570293784
+    },
+    {
+      "role": "user",
+      "text": "Hi, I'm evaluating Smallest AI for our contact center. Can you give me an overview of your platform?",
+      "ts": 1772570293984
+    },
+    {
+      "role": "agent",
+      "text": "That sounds like a great project. To give you the right overview, I need to understand your specific use case. Are you looking to build a new voice agent from scratch, or do you have an existing system you're integrating with?",
+      "ts": 1772570295188
+    },
+    {
+      "role": "user",
+      "text": "What's the latency like end-to-end?",
+      "ts": 1772570295690
+    },
+    {
+      "role": "agent",
+      "text": "The full end-to-end latency for a voice conversation is approximately 2.8 seconds. That includes Pulse STT (64ms), Electron SLM (45ms), and Lightning TTS (~200ms). For real-time streaming, we can get sub-200ms first-byte response times. Does that meet your requirements?",
+      "ts": 1772570296772
+    },
+    {
+      "role": "user",
+      "text": "Can we use just the TTS without the full agent platform?",
+      "ts": 1772570297274
+    },
+    {
+      "role": "agent",
+      "text": "Yes, absolutely. Waves is our standalone speech engine, so you can use the Lightning TTS API independently of the Atoms agent platform. Would you like me to walk you through the API endpoints for that?",
+      "ts": 1772570298061
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "agentId": "69a74753b42c1648e0f8c4d9",
+  "agentName": "Commercial Desk (Negotiating Agent)",
+  "scenarios": [
+    {
+      "id": "negotiation-standard-quote",
+      "name": "Standard pricing inquiry — Atoms agent for India",
+      "persona": "Head of operations at mid-size NBFC looking at collections automation",
+      "messages": [
+        "Hi, we're looking at using Smallest AI for automated collections calls in India. About 200,000 calls per month, average 3 minutes each. What would that cost?",
+        "How does that compare to ElevenLabs?",
+        "Can you do better on the price?"
+      ],
+      "expectedBehaviors": [
+        { "check": "quotes_per_minute_rate", "pattern": "\\$0\\.0[3-6]|₹[3-6]|per.*minute", "required": true },
+        { "check": "quotes_monthly_total", "pattern": "\\$[0-9,]+.*month|month|monthly", "required": true },
+        { "check": "competitive_positioning", "pattern": "ElevenLabs|cheaper|72%|80%", "required": true },
+        { "check": "asks_for_commitment", "pattern": "volume|commit|longer.*term|contract", "required": false }
+      ]
+    },
+    {
+      "id": "negotiation-below-floor",
+      "name": "Client pushes below minimum price — should escalate",
+      "persona": "Aggressive procurement buyer",
+      "messages": [
+        "I need Atoms pricing for 500K minutes per month.",
+        "Our budget is $0.02 per minute. Can you match that?"
+      ],
+      "expectedBehaviors": [
+        { "check": "quotes_500k", "pattern": "\\$0\\.0[3-5]|500K|500,000", "required": true },
+        { "check": "escalates_below_floor", "pattern": "below|floor|custom|VP|sales|leadership|connect", "required": true }
+      ]
+    },
+    {
+      "id": "negotiation-poc-terms",
+      "name": "Client asks about POC pricing and terms",
+      "persona": "Product manager exploring options",
+      "messages": [
+        "We're interested but want to start with a POC. What are your trial terms?",
+        "What happens with our data after the POC?",
+        "If the POC is successful, what's the path to production?"
+      ],
+      "expectedBehaviors": [
+        { "check": "quotes_poc_cost", "pattern": "\\$1,000|\\$2,500|1,000.*2,500|2.*4 weeks", "required": true },
+        { "check": "data_deletion", "pattern": "deleted|30 days|removed", "required": true },
+        { "check": "mentions_msa", "pattern": "MSA|contract|commercial.*agreement|production", "required": true }
+      ]
+    },
+    {
+      "id": "negotiation-tts-standalone",
+      "name": "Client wants standalone TTS pricing",
+      "persona": "CTO at a healthcare company",
+      "messages": [
+        "We just need TTS, not the full agent. What's Lightning V3.1 pricing for 1 million minutes per month?",
+        "That's interesting. What about for the US market — any surcharge?"
+      ],
+      "expectedBehaviors": [
+        { "check": "quotes_tts_rate", "pattern": "\\$0\\.01[0-4]|per.*minute|Lightning", "required": true },
+        { "check": "mentions_us_surcharge", "pattern": "\\$0\\.06|US|location|surcharge", "required": true }
+      ]
+    },
+    {
+      "id": "negotiation-on-prem",
+      "name": "Client asks about on-prem pricing",
+      "persona": "Enterprise buyer at a telecom",
+      "messages": [
+        "We need on-prem deployment. What are your per-minute rates for 50 million minutes per year?",
+        "And what's the minimum volume commitment?"
+      ],
+      "expectedBehaviors": [
+        { "check": "quotes_on_prem_tier", "pattern": "Growth|20M|100M|₹0\\.18|₹0\\.90|on-prem", "required": true },
+        { "check": "mentions_minimum", "pattern": "6M|minimum|60K", "required": true }
+      ]
+    },
+    {
+      "id": "negotiation-legal-redirect",
+      "name": "Client asks about SLA and contract terms",
+      "persona": "Legal/procurement asking about SLA",
+      "messages": [
+        "What's your SLA for uptime?",
+        "We need 99.99% uptime guaranteed in the contract. Can you commit to that?"
+      ],
+      "expectedBehaviors": [
+        { "check": "quotes_sla", "pattern": "99\\.5%|99\\.9%|uptime", "required": true },
+        { "check": "redirects_custom_sla", "pattern": "legal|engineering|review|custom|connect", "required": true }
+      ]
+    }
+  ]
+}

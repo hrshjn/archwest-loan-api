@@ -1,0 +1,31 @@
+{
+  "scenario": "negotiation-below-floor",
+  "agentId": "69a74753b42c1648e0f8c4d9",
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hello! This is the commercial desk at Smallest AI. I'm an AI assistant here to help with pricing and quotes. Are you looking for standard pricing or something specific for a project?",
+      "ts": 1772570570912
+    },
+    {
+      "role": "user",
+      "text": "I need Atoms pricing for 500K minutes per month.",
+      "ts": 1772570571539
+    },
+    {
+      "role": "agent",
+      "text": "Got it, 500K minutes per month. To give you the exact rate, I need to know which deployment you're looking for—cloud, VPC, or on-prem?",
+      "ts": 1772570572957
+    },
+    {
+      "role": "user",
+      "text": "Our budget is $0.02 per minute. Can you match that?",
+      "ts": 1772570573459
+    },
+    {
+      "role": "agent",
+      "text": "That is right at our pricing floor for the 500K band. To get that rate, I'd need to confirm your deployment type—cloud, VPC, or on-prem?",
+      "ts": 1772570574250
+    }
+  ]
+}

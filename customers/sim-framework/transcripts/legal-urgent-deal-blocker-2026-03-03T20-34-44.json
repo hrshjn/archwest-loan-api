@@ -1,0 +1,26 @@
+{
+  "scenario": "legal-urgent-deal-blocker",
+  "agentId": "69a744f8bd1bc2da08fcc214",
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hello, this is the Legal Coordination Assistant for Smallest AI. I can help you with NDAs, MSAs, or vendor registration. How can I assist you today?",
+      "ts": 1772570050554
+    },
+    {
+      "role": "user",
+      "text": "Hi, this is urgent. We've been waiting 3 weeks for NDA counter-signature from your side. The deal is stalled.",
+      "ts": 1772570051071
+    },
+    {
+      "role": "agent",
+      "text": "I understand this is urgent, and I apologize for the delay. To check the status of that NDA, could you please provide the name of your company?",
+      "ts": 1772570052023
+    },
+    {
+      "role": "user",
+      "text": "This is for TVS Credit.",
+      "ts": 1772570052526
+    }
+  ]
+}

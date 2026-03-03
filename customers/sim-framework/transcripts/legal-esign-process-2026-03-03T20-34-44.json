@@ -1,0 +1,31 @@
+{
+  "scenario": "legal-esign-process",
+  "agentId": "69a744f8bd1bc2da08fcc214",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "We use Aadhaar-based E-Sign for all vendor NDAs. Can Smallest AI support that?",
+      "ts": 1772570077060
+    },
+    {
+      "role": "agent",
+      "text": "Hello, this is the Legal Coordination Assistant for Smallest AI. I can help you with NDAs, MSAs, or vendor registration. How can I assist you today?",
+      "ts": 1772570077265
+    },
+    {
+      "role": "user",
+      "text": "What signatory details do we need from your side for E-Sign?",
+      "ts": 1772570077768
+    },
+    {
+      "role": "agent",
+      "text": "Yes, we absolutely support Aadhaar-based E-Sign for Indian banking clients. You can send the NDA to legal@smallest.ai",
+      "ts": 1772570077810
+    },
+    {
+      "role": "agent",
+      "text": "For E-Sign, we typically require the signatory's Aadhaar number, mobile number, and a One-Time Password (OTP). We can also use a DocuSign or Adobe Sign link if that works better for your team.",
+      "ts": 1772570078601
+    }
+  ]
+}

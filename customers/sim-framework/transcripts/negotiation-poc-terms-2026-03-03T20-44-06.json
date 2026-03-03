@@ -1,0 +1,41 @@
+{
+  "scenario": "negotiation-poc-terms",
+  "agentId": "69a74753b42c1648e0f8c4d9",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "We're interested but want to start with a POC. What are your trial terms?",
+      "ts": 1772570587088
+    },
+    {
+      "role": "agent",
+      "text": "Hello! This is the Commercial desk at Smallest AI. I'm an AI assistant here to help with your pricing and commercial inquiries. How can I assist you today?",
+      "ts": 1772570587822
+    },
+    {
+      "role": "agent",
+      "text": "Great. We can definitely set up a Proof of Concept for you. Our standard POC typically runs for 2 to 4 weeks. The cost for the scope of work is generally between $1,000 and $2,500. We'd define specific success criteria upfront, like automation rate and latency, and any data from the POC is deleted within 30 days of completion. Does that sound like the right starting point for you?",
+      "ts": 1772570589583
+    },
+    {
+      "role": "user",
+      "text": "What happens with our data after the POC?",
+      "ts": 1772570590083
+    },
+    {
+      "role": "agent",
+      "text": "All data collected during the POC is deleted within 30 days of the project completion. We take data privacy very seriously, so we ensure nothing is retained after that period. Does that help clarify things for you?",
+      "ts": 1772570590913
+    },
+    {
+      "role": "user",
+      "text": "If the POC is successful, what's the path to production?",
+      "ts": 1772570591415
+    },
+    {
+      "role": "agent",
+      "text": "If the POC is successful, it typically converts directly into a full Master Service Agreement and commercial contract. We would then move your deployment into production, and the data from the POC phase is deleted as mentioned. Does that sound like a good process for your team?",
+      "ts": 1772570592338
+    }
+  ]
+}

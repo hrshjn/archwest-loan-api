@@ -1,0 +1,31 @@
+{
+  "scenario": "legal-pricing-redirect",
+  "agentId": "69a744f8bd1bc2da08fcc214",
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hello! This is the Legal Coordination Assistant at Smallest AI. I can help you with our NDAs, MSAs, or vendor registration. How can I assist you today?",
+      "ts": 1772570035361
+    },
+    {
+      "role": "user",
+      "text": "Hi, I want to know your pricing per minute for voice AI.",
+      "ts": 1772570035735
+    },
+    {
+      "role": "agent",
+      "text": "I don't have access to specific pricing or commercial details here. For pricing on our voice AI, you'll need to reach out to our sales team. I can help you with legal agreements like NDAs or MSAs if you're ready for those. Would you like to proceed with a legal process?",
+      "ts": 1772570036988
+    },
+    {
+      "role": "user",
+      "text": "Ok, then who handles NDA execution?",
+      "ts": 1772570037491
+    },
+    {
+      "role": "agent",
+      "text": "NDA execution is handled by our legal team. You can send your NDA or our standard template to legal@smallest.ai, and Manjari will review it within two business days. Would you like to send an NDA over?",
+      "ts": 1772570038311
+    }
+  ]
+}

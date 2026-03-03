@@ -1,0 +1,130 @@
+{
+  "agent": {
+    "id": "69a730c36cd1d52771328761",
+    "name": "InfoSec Questionnaire Responder"
+  },
+  "timestamp": "2026-03-03T20:25:59.460Z",
+  "summary": {
+    "totalChecks": 4,
+    "totalPassed": 2,
+    "totalRequiredFails": 2,
+    "score": "50%"
+  },
+  "scenarios": [
+    {
+      "id": "infosec-certs-happy-path",
+      "name": "Standard certification inquiry",
+      "disconnected": true,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "Hi, I'm Priya from HDFC Bank's infosec team. We're evaluating Smallest AI for our collections use case.",
+          "ts": 1772569535361
+        },
+        {
+          "role": "agent",
+          "text": "Hi, this is the Smallest AI security team. How can I help you today?",
+          "ts": 1772569536389
+        },
+        {
+          "role": "agent",
+          "text": "Hi, this is the Smallest AI security team. How can I help you today?",
+          "ts": 1772569536404
+        },
+        {
+          "role": "user",
+          "text": "What security certifications do you hold?",
+          "ts": 1772569536889
+        },
+        {
+          "role": "agent",
+          "text": "We hold ISO/IEC 27001:2022, SOC 2 Type II, and PCI DSS compliance. We do not currently hold HIPAA, FedRAMP, or StateRAMP certifications. Would you like the specific details for any of those?",
+          "ts": 1772569537865
+        },
+        {
+          "role": "user",
+          "text": "Do you have PCI DSS compliance?",
+          "ts": 1772569538365
+        },
+        {
+          "role": "agent",
+          "text": "Yes, we are PCI DSS compliant. Our payment card data handling is fully aligned with PCI DSS requirements. I can have our team send the compliance documentation to you via email if you'd like.",
+          "ts": 1772569539182
+        },
+        {
+          "role": "user",
+          "text": "Can you share your SOC 2 report?",
+          "ts": 1772569539683
+        },
+        {
+          "role": "agent",
+          "text": "I can have our team send that to you. What's the best email address? We'll send it from security@smallest.ai, usually within the same business day.",
+          "ts": 1772569540448
+        },
+        {
+          "role": "user",
+          "text": "That's all for now, thanks.",
+          "ts": 1772569540949
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "asks_for_identity",
+            "description": "Agent should ask for caller's name and company",
+            "required": true,
+            "pass": null,
+            "note": "Manual review needed — no regex pattern defined"
+          },
+          {
+            "id": "cites_iso_cert_number",
+            "description": "cites_iso_cert_number",
+            "required": true,
+            "pass": false,
+            "matchedIn": null
+          },
+          {
+            "id": "mentions_soc2_period",
+            "description": "mentions_soc2_period",
+            "required": true,
+            "pass": false,
+            "matchedIn": null
+          },
+          {
+            "id": "confirms_pci_dss",
+            "description": "confirms_pci_dss",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Yes, we are PCI DSS compliant. Our payment card data handling is fully aligned with PCI DSS requirements. I can have our"
+          },
+          {
+            "id": "offers_nda_for_report",
+            "description": "offers_nda_for_report",
+            "required": true,
+            "pass": true,
+            "matchedIn": "I can have our team send that to you. What's the best email address? We'll send it from security@smallest.ai, usually wi"
+          }
+        ],
+        "total": 4,
+        "passed": 2,
+        "score": "50",
+        "requiredFails": [
+          {
+            "id": "cites_iso_cert_number",
+            "description": "cites_iso_cert_number",
+            "required": true,
+            "pass": false,
+            "matchedIn": null
+          },
+          {
+            "id": "mentions_soc2_period",
+            "description": "mentions_soc2_period",
+            "required": true,
+            "pass": false,
+            "matchedIn": null
+          }
+        ]
+      }
+    }
+  ]
+}

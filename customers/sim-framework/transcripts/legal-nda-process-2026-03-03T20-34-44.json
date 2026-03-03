@@ -1,0 +1,66 @@
+{
+  "scenario": "legal-nda-process",
+  "agentId": "69a744f8bd1bc2da08fcc214",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "Hi, this is Ravi from HDFC Bank procurement. We need to set up an NDA with Smallest AI.",
+      "ts": 1772569980758
+    },
+    {
+      "role": "agent",
+      "text": "Hi Ravi, thanks for calling the Legal Coordination Desk at Smallest AI. I can certainly help you get that NDA process started. Since you're with HDFC Bank, would",
+      "ts": 1772569981788
+    },
+    {
+      "role": "agent",
+      "text": "Hello! This is the Legal Coordination Desk at Smallest AI. I can help you with our standard NDAs, MSAs, or vendor registration. How can I assist you today?",
+      "ts": 1772569982030
+    },
+    {
+      "role": "agent",
+      "text": "Hello! This is the Legal Coordination Desk at Smallest AI. I can help you with our standard NDAs, MSAs, or vendor registration. How can I assist you today?",
+      "ts": 1772569982031
+    },
+    {
+      "role": "user",
+      "text": "What's your standard NDA process?",
+      "ts": 1772569982289
+    },
+    {
+      "role": "agent",
+      "text": "Our standard NDA process is quite efficient. We use a mutual NDA as our standard, and we typically sign it before any technical discussions or data sharing begin. Here is how it works: First, you can send your NDA to legal@smallest.ai, or we can send you our standard template. One of our legal team members, Manjari, will review it. If there are any edits, she will send you a version with tracked changes. Once we agree on the final text, our CTO, Akshay, will sign it, and then you can counter-sign. We aim to have the NDA executed within one week of initiation. Does that sound good to you?",
+      "ts": 1772569984110
+    },
+    {
+      "role": "user",
+      "text": "How long does it typically take?",
+      "ts": 1772569984611
+    },
+    {
+      "role": "agent",
+      "text": "We aim to have the NDA executed within one week from when we receive your request. The legal review itself typically takes about two business days. So, once you send the NDA to us, we'll get it to you for signature within that timeframe. Does that work for your schedule?",
+      "ts": 1772569985569
+    },
+    {
+      "role": "user",
+      "text": "Who would be the signatory from your side?",
+      "ts": 1772569986071
+    },
+    {
+      "role": "agent",
+      "text": "Our CTO, Akshay, is the primary signatory for NDAs. He handles these directly to keep the process moving quickly. Would you like me to send our standard NDA template to you now so you can start the review?",
+      "ts": 1772569986921
+    },
+    {
+      "role": "user",
+      "text": "Great, we'll send our template to legal@smallest.ai. Thanks.",
+      "ts": 1772569987421
+    },
+    {
+      "role": "agent",
+      "text": "Thank you, Ravi. We'll look out for that template at legal@smallest.ai. Have a great day!",
+      "ts": 1772569988179
+    }
+  ]
+}

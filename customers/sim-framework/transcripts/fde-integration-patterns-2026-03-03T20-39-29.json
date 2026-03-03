@@ -1,0 +1,46 @@
+{
+  "scenario": "fde-integration-patterns",
+  "agentId": "69a7466c030fdcfe28d982f9",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "Hey, I need to integrate Smallest TTS into our app. What are my options?",
+      "ts": 1772570310755
+    },
+    {
+      "role": "agent",
+      "text": "I can definitely help you with that. We have a few different options depending on your needs. Are you looking to stream audio in real",
+      "ts": 1772570311647
+    },
+    {
+      "role": "agent",
+      "text": "Hello! I'm the Technical Integration Assistant for Smallest AI. I can help you understand our platform, integrate with our APIs, or scope a proof of concept. To get us started, could you tell me a bit about your technical background?",
+      "ts": 1772570311793
+    },
+    {
+      "role": "agent",
+      "text": "Hello! I'm the Technical Integration Assistant for Smallest AI. I can help you understand our platform, integrate with our APIs, or scope a proof of concept. To get us started, could you tell me a bit about your technical background?",
+      "ts": 1772570311793
+    },
+    {
+      "role": "user",
+      "text": "We need real-time streaming. What protocol should we use?",
+      "ts": 1772570312148
+    },
+    {
+      "role": "agent",
+      "text": "For real-time streaming, we recommend using WebSockets. They provide the lowest latency and are ideal for live voice interactions. Our API supports bidirectional streaming, so you can send audio to us and receive the TTS output immediately. Do you have a preference for using the REST API for initial setup and testing, or are you looking to move straight to WebSocket?",
+      "ts": 1772570313226
+    },
+    {
+      "role": "user",
+      "text": "What audio formats do you support?",
+      "ts": 1772570313729
+    },
+    {
+      "role": "agent",
+      "text": "We support raw PCM at 16kHz or 8kHz for WebSocket streaming. For audio files, we accept WAV, MP3, and other standard formats. Since you're looking for real-time streaming, you'll want to use raw PCM at 16kHz. Does that sound like what you're expecting?",
+      "ts": 1772570314735
+    }
+  ]
+}

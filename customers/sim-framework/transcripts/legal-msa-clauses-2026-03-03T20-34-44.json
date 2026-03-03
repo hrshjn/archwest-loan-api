@@ -1,0 +1,51 @@
+{
+  "scenario": "legal-msa-clauses",
+  "agentId": "69a744f8bd1bc2da08fcc214",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "Hi, I'm reviewing the MSA terms for Smallest AI. I have a few questions.",
+      "ts": 1772570000640
+    },
+    {
+      "role": "agent",
+      "text": "Hello, this is the Legal Coordination Desk at Smallest AI. How can I help you with your legal process today?",
+      "ts": 1772570000852
+    },
+    {
+      "role": "agent",
+      "text": "I can certainly help with that. What specific questions do you have about the MSA terms?",
+      "ts": 1772570001305
+    },
+    {
+      "role": "user",
+      "text": "What's your standard position on liability caps?",
+      "ts": 1772570001354
+    },
+    {
+      "role": "agent",
+      "text": "Our standard position is that liability is capped at the fees paid by the client in the preceding 12 months. We do not accept unlimited liability.",
+      "ts": 1772570002023
+    },
+    {
+      "role": "user",
+      "text": "And what about data processing? Do you use our data for training?",
+      "ts": 1772570002525
+    },
+    {
+      "role": "agent",
+      "text": "No, we do not use customer data to train our models. We process your data strictly for the delivery of the service.",
+      "ts": 1772570003152
+    },
+    {
+      "role": "user",
+      "text": "We need unlimited liability for data breaches. Is that possible?",
+      "ts": 1772570003654
+    },
+    {
+      "role": "agent",
+      "text": "I cannot agree to unlimited liability. For any modifications to our standard terms, please reach out to Manjari at legal@smallest.ai, and she can connect you with our legal team for review.",
+      "ts": 1772570004437
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "scenario": "fde-poc-scoping",
+  "agentId": "69a7466c030fdcfe28d982f9",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "We want to run a POC for automated collections calls.",
+      "ts": 1772570327102
+    },
+    {
+      "role": "agent",
+      "text": "Great, I can help you scope that POC for automated collections. To get started, what specific channel are you looking to use for these calls—telephony, web-call, or chat?",
+      "ts": 1772570328151
+    },
+    {
+      "role": "agent",
+      "text": "Hello, this is Technical Support at Smallest AI. I'm here to help you understand our platform and integrate with our APIs. To get us started, could you tell me a bit about your technical background and what you're looking to build?",
+      "ts": 1772570328189
+    },
+    {
+      "role": "user",
+      "text": "Outbound telephony. About 50,000 calls per month.",
+      "ts": 1772570328653
+    },
+    {
+      "role": "agent",
+      "text": "Got it, outbound telephony. And regarding the volume, you mentioned about 50,000 calls per month—is that correct?",
+      "ts": 1772570329306
+    },
+    {
+      "role": "user",
+      "text": "India only, Hindi and English.",
+      "ts": 1772570329807
+    },
+    {
+      "role": "agent",
+      "text": "Understood, India only, with support for Hindi and English. Just to clarify the volume—did you mean 50,000 calls per month, or per day?",
+      "ts": 1772570330561
+    }
+  ]
+}

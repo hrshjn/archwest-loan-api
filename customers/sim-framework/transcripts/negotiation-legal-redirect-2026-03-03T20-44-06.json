@@ -1,0 +1,31 @@
+{
+  "scenario": "negotiation-legal-redirect",
+  "agentId": "69a74753b42c1648e0f8c4d9",
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hello! This is the Commercial Desk at Smallest AI. I can help you with pricing, volume quotes, or POC terms. How can I assist you today?",
+      "ts": 1772570636877
+    },
+    {
+      "role": "user",
+      "text": "What's your SLA for uptime?",
+      "ts": 1772570637004
+    },
+    {
+      "role": "agent",
+      "text": "For standard commercial contracts, we offer a 99.9% uptime SLA. For custom SLAs or specific requirements, our legal team handles those terms directly. Would you like to proceed with the standard SLA, or would you prefer to discuss something more specific?",
+      "ts": 1772570638107
+    },
+    {
+      "role": "user",
+      "text": "We need 99.99% uptime guaranteed in the contract. Can you commit to that?",
+      "ts": 1772570638610
+    },
+    {
+      "role": "agent",
+      "text": "That level of uptime is typically handled by our legal team to ensure it meets your specific requirements. I can have them reach out to discuss that with you. In the meantime, would you like to discuss the standard pricing and volume tiers?",
+      "ts": 1772570639463
+    }
+  ]
+}

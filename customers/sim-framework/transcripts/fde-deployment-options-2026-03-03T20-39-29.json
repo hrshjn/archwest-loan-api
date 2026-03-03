@@ -1,0 +1,46 @@
+{
+  "scenario": "fde-deployment-options",
+  "agentId": "69a7466c030fdcfe28d982f9",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "Our data can't leave our data center. Can Smallest AI be deployed on-prem?",
+      "ts": 1772570344053
+    },
+    {
+      "role": "agent",
+      "text": "Yes, we do support on-premises deployment. It's a full Docker and Kubernetes setup that you run in your own data center, giving you complete data sovereignty. To help us scope the best deployment model for you, could you tell",
+      "ts": 1772570345219
+    },
+    {
+      "role": "agent",
+      "text": "Hello, this is the Technical Integration Assistant for Smallest AI. I'm here to help you understand our platform and get your integration started. To get us off on the right foot, could you tell me a bit about your technical background? Are you a developer, an architect, or maybe a product manager?",
+      "ts": 1772570345313
+    },
+    {
+      "role": "agent",
+      "text": "Hello, this is the Technical Integration Assistant for Smallest AI. I'm here to help you understand our platform and get your integration started. To get us off on the right foot, could you tell me a bit about your technical background? Are you a developer, an architect, or maybe a product manager?",
+      "ts": 1772570345318
+    },
+    {
+      "role": "user",
+      "text": "How long does on-prem setup take?",
+      "ts": 1772570345721
+    },
+    {
+      "role": "agent",
+      "text": "On-premises setup typically takes about 4 to 8 weeks, depending on your specific environment and network requirements. To get started, could you tell me a bit about your current infrastructure? We need to ensure your environment meets the technical specifications for the deployment.",
+      "ts": 1772570346611
+    },
+    {
+      "role": "user",
+      "text": "What about VPC deployment?",
+      "ts": 1772570347113
+    },
+    {
+      "role": "agent",
+      "text": "AWS VPC is a great option for customers who want to keep their data within our AWS infrastructure while maintaining network isolation. It usually takes 2 to 4 weeks to set up. Since you mentioned data residency earlier, are you looking for full on-premises control, or does the VPC model meet your requirements?",
+      "ts": 1772570348150
+    }
+  ]
+}

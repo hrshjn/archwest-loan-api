@@ -1,0 +1,80 @@
+{
+  "agentId": "69a7466c030fdcfe28d982f9",
+  "agentName": "Technical Support Agent (FDE)",
+  "scenarios": [
+    {
+      "id": "fde-architecture-overview",
+      "name": "Client asks for platform architecture overview",
+      "persona": "Solution architect evaluating voice AI platforms",
+      "messages": [
+        "Hi, I'm evaluating Smallest AI for our contact center. Can you give me an overview of your platform?",
+        "What's the latency like end-to-end?",
+        "Can we use just the TTS without the full agent platform?"
+      ],
+      "expectedBehaviors": [
+        { "check": "explains_atoms_waves", "pattern": "Atoms|Waves|TTS|STT|agent", "required": true },
+        { "check": "gives_latency_numbers", "pattern": "64ms|45ms|200ms|2\\.8", "required": true },
+        { "check": "confirms_standalone", "pattern": "standalone|separately|without.*Atoms|Waves.*API", "required": true }
+      ]
+    },
+    {
+      "id": "fde-integration-patterns",
+      "name": "Developer asks about API integration options",
+      "persona": "Backend developer building integration",
+      "messages": [
+        "Hey, I need to integrate Smallest TTS into our app. What are my options?",
+        "We need real-time streaming. What protocol should we use?",
+        "What audio formats do you support?"
+      ],
+      "expectedBehaviors": [
+        { "check": "mentions_rest_and_ws", "pattern": "REST|WebSocket|API", "required": true },
+        { "check": "recommends_websocket", "pattern": "WebSocket|streaming|real-time", "required": true },
+        { "check": "lists_audio_formats", "pattern": "PCM|WAV|MP3|16.*kHz", "required": true }
+      ]
+    },
+    {
+      "id": "fde-poc-scoping",
+      "name": "Client wants to scope a POC",
+      "persona": "Product manager at a financial services company",
+      "messages": [
+        "We want to run a POC for automated collections calls.",
+        "Outbound telephony. About 50,000 calls per month.",
+        "India only, Hindi and English."
+      ],
+      "expectedBehaviors": [
+        { "check": "asks_channel", "pattern": "channel|telephony|web.*call|chat", "required": false },
+        { "check": "captures_volume", "pattern": "50,000|50K|volume|monthly", "required": true },
+        { "check": "captures_languages", "pattern": "Hindi|English|language", "required": true },
+        { "check": "asks_followup", "pattern": "SIP|telephony.*provider|CRM|concurrency|flow|next", "required": true }
+      ]
+    },
+    {
+      "id": "fde-deployment-options",
+      "name": "Enterprise asks about on-prem deployment",
+      "persona": "CISO evaluating data sovereignty options",
+      "messages": [
+        "Our data can't leave our data center. Can Smallest AI be deployed on-prem?",
+        "How long does on-prem setup take?",
+        "What about VPC deployment?"
+      ],
+      "expectedBehaviors": [
+        { "check": "confirms_onprem", "pattern": "on-prem|Docker|Kubernetes|data center|sovereignty", "required": true },
+        { "check": "gives_timeline", "pattern": "4.*8 weeks|weeks", "required": true },
+        { "check": "explains_vpc", "pattern": "VPC|customer.*AWS|data.*stays|2.*4 weeks", "required": true }
+      ]
+    },
+    {
+      "id": "fde-pricing-redirect",
+      "name": "Caller asks about pricing (out of scope)",
+      "persona": "Procurement person who reached tech support",
+      "messages": [
+        "What's your per-minute pricing for voice AI?",
+        "Ok, can you tell me about the API authentication then?"
+      ],
+      "expectedBehaviors": [
+        { "check": "redirects_pricing", "pattern": "sales|pricing|commercial|connect", "required": true },
+        { "check": "explains_auth", "pattern": "Bearer|API.*key|token|Authorization", "required": true }
+      ]
+    }
+  ]
+}

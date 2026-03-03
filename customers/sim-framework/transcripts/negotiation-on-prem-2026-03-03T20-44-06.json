@@ -1,0 +1,31 @@
+{
+  "scenario": "negotiation-on-prem",
+  "agentId": "69a74753b42c1648e0f8c4d9",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "We need on-prem deployment. What are your per-minute rates for 50 million minutes per year?",
+      "ts": 1772570621741
+    },
+    {
+      "role": "agent",
+      "text": "Hello! This is the commercial desk at Smallest AI. I can help you with standard pricing, volume quotes, and POC terms. What can I do for you today?",
+      "ts": 1772570621978
+    },
+    {
+      "role": "agent",
+      "text": "For on-prem deployment, our Growth tier applies at 50 million minutes per year. The rates would be:\n Speech-to-Text: ₹0.18 per minute\n Text-to-Speech: ₹0.90 per minute Would you like to hear about our concurrency surcharges or deployment terms?",
+      "ts": 1772570623054
+    },
+    {
+      "role": "user",
+      "text": "And what's the minimum volume commitment?",
+      "ts": 1772570623555
+    },
+    {
+      "role": "agent",
+      "text": "For the Growth tier, the minimum volume commitment is 20 million minutes per year. Since you're looking at 50 million minutes, you would be comfortably above that threshold. Would you like to discuss the deployment or data handling terms?",
+      "ts": 1772570624424
+    }
+  ]
+}

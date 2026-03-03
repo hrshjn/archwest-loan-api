@@ -1,0 +1,31 @@
+{
+  "scenario": "sales-are-you-ai",
+  "agentId": "69a72063bd1bc2da08fcc1e1",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "Hello?",
+      "ts": 1772569579622
+    },
+    {
+      "role": "agent",
+      "text": "Hi Kawaldeep Singh, this is Karan from Smallest AI. We built voice AI that handles debt collection calls — a Jaipur NBFC is doing 17,000 completed calls a day on our platform with 96% automation. Is collections automation something your team is looking at?",
+      "ts": 1772569579813
+    },
+    {
+      "role": "agent",
+      "text": "Hi Kawaldeep Singh, this is Karan from Smallest AI. We built voice AI that handles debt collection calls — a Jaipur NBFC is doing 17,000 completed calls a day on our platform with 96% automation. Is collections automation something your team is looking at?",
+      "ts": 1772569580950
+    },
+    {
+      "role": "user",
+      "text": "Wait — are you a real person or an AI?",
+      "ts": 1772569581450
+    },
+    {
+      "role": "agent",
+      "text": "Yes, I'm an AI voice agent built on Smallest AI's platform. What you just heard in the simulation? That's our tech. If you'd like to speak with a human on our team, I can arrange that.",
+      "ts": 1772569582358
+    }
+  ]
+}

@@ -1,0 +1,383 @@
+{
+  "agent": {
+    "id": "69a7466c030fdcfe28d982f9",
+    "name": "Technical Support Agent (FDE)"
+  },
+  "timestamp": "2026-03-03T20:39:29.670Z",
+  "summary": {
+    "totalChecks": 15,
+    "totalPassed": 14,
+    "totalRequiredFails": 1,
+    "score": "93%"
+  },
+  "scenarios": [
+    {
+      "id": "fde-architecture-overview",
+      "name": "Client asks for platform architecture overview",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "agent",
+          "text": "Hello! This is the Technical Support Assistant for Smallest AI. I'm here to help you understand our platform and get your integration set up. To start, could you tell me a bit about your technical background and what you're looking to build today?",
+          "ts": 1772570293784
+        },
+        {
+          "role": "user",
+          "text": "Hi, I'm evaluating Smallest AI for our contact center. Can you give me an overview of your platform?",
+          "ts": 1772570293984
+        },
+        {
+          "role": "agent",
+          "text": "That sounds like a great project. To give you the right overview, I need to understand your specific use case. Are you looking to build a new voice agent from scratch, or do you have an existing system you're integrating with?",
+          "ts": 1772570295188
+        },
+        {
+          "role": "user",
+          "text": "What's the latency like end-to-end?",
+          "ts": 1772570295690
+        },
+        {
+          "role": "agent",
+          "text": "The full end-to-end latency for a voice conversation is approximately 2.8 seconds. That includes Pulse STT (64ms), Electron SLM (45ms), and Lightning TTS (~200ms). For real-time streaming, we can get sub-200ms first-byte response times. Does that meet your requirements?",
+          "ts": 1772570296772
+        },
+        {
+          "role": "user",
+          "text": "Can we use just the TTS without the full agent platform?",
+          "ts": 1772570297274
+        },
+        {
+          "role": "agent",
+          "text": "Yes, absolutely. Waves is our standalone speech engine, so you can use the Lightning TTS API independently of the Atoms agent platform. Would you like me to walk you through the API endpoints for that?",
+          "ts": 1772570298061
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "explains_atoms_waves",
+            "description": "explains_atoms_waves",
+            "required": true,
+            "pass": true,
+            "matchedIn": "That sounds like a great project. To give you the right overview, I need to understand your specific use case. Are you l"
+          },
+          {
+            "id": "gives_latency_numbers",
+            "description": "gives_latency_numbers",
+            "required": true,
+            "pass": true,
+            "matchedIn": "The full end-to-end latency for a voice conversation is approximately 2.8 seconds. That includes Pulse STT (64ms), Elect"
+          },
+          {
+            "id": "confirms_standalone",
+            "description": "confirms_standalone",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Yes, absolutely. Waves is our standalone speech engine, so you can use the Lightning TTS API independently of the Atoms "
+          }
+        ],
+        "total": 3,
+        "passed": 3,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "fde-integration-patterns",
+      "name": "Developer asks about API integration options",
+      "disconnected": true,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "Hey, I need to integrate Smallest TTS into our app. What are my options?",
+          "ts": 1772570310755
+        },
+        {
+          "role": "agent",
+          "text": "I can definitely help you with that. We have a few different options depending on your needs. Are you looking to stream audio in real",
+          "ts": 1772570311647
+        },
+        {
+          "role": "agent",
+          "text": "Hello! I'm the Technical Integration Assistant for Smallest AI. I can help you understand our platform, integrate with our APIs, or scope a proof of concept. To get us started, could you tell me a bit about your technical background?",
+          "ts": 1772570311793
+        },
+        {
+          "role": "agent",
+          "text": "Hello! I'm the Technical Integration Assistant for Smallest AI. I can help you understand our platform, integrate with our APIs, or scope a proof of concept. To get us started, could you tell me a bit about your technical background?",
+          "ts": 1772570311793
+        },
+        {
+          "role": "user",
+          "text": "We need real-time streaming. What protocol should we use?",
+          "ts": 1772570312148
+        },
+        {
+          "role": "agent",
+          "text": "For real-time streaming, we recommend using WebSockets. They provide the lowest latency and are ideal for live voice interactions. Our API supports bidirectional streaming, so you can send audio to us and receive the TTS output immediately. Do you have a preference for using the REST API for initial setup and testing, or are you looking to move straight to WebSocket?",
+          "ts": 1772570313226
+        },
+        {
+          "role": "user",
+          "text": "What audio formats do you support?",
+          "ts": 1772570313729
+        },
+        {
+          "role": "agent",
+          "text": "We support raw PCM at 16kHz or 8kHz for WebSocket streaming. For audio files, we accept WAV, MP3, and other standard formats. Since you're looking for real-time streaming, you'll want to use raw PCM at 16kHz. Does that sound like what you're expecting?",
+          "ts": 1772570314735
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "mentions_rest_and_ws",
+            "description": "mentions_rest_and_ws",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Hello! I'm the Technical Integration Assistant for Smallest AI. I can help you understand our platform, integrate with o"
+          },
+          {
+            "id": "recommends_websocket",
+            "description": "recommends_websocket",
+            "required": true,
+            "pass": true,
+            "matchedIn": "For real-time streaming, we recommend using WebSockets. They provide the lowest latency and are ideal for live voice int"
+          },
+          {
+            "id": "lists_audio_formats",
+            "description": "lists_audio_formats",
+            "required": true,
+            "pass": true,
+            "matchedIn": "We support raw PCM at 16kHz or 8kHz for WebSocket streaming. For audio files, we accept WAV, MP3, and other standard for"
+          }
+        ],
+        "total": 3,
+        "passed": 3,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "fde-poc-scoping",
+      "name": "Client wants to scope a POC",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "We want to run a POC for automated collections calls.",
+          "ts": 1772570327102
+        },
+        {
+          "role": "agent",
+          "text": "Great, I can help you scope that POC for automated collections. To get started, what specific channel are you looking to use for these calls—telephony, web-call, or chat?",
+          "ts": 1772570328151
+        },
+        {
+          "role": "agent",
+          "text": "Hello, this is Technical Support at Smallest AI. I'm here to help you understand our platform and integrate with our APIs. To get us started, could you tell me a bit about your technical background and what you're looking to build?",
+          "ts": 1772570328189
+        },
+        {
+          "role": "user",
+          "text": "Outbound telephony. About 50,000 calls per month.",
+          "ts": 1772570328653
+        },
+        {
+          "role": "agent",
+          "text": "Got it, outbound telephony. And regarding the volume, you mentioned about 50,000 calls per month—is that correct?",
+          "ts": 1772570329306
+        },
+        {
+          "role": "user",
+          "text": "India only, Hindi and English.",
+          "ts": 1772570329807
+        },
+        {
+          "role": "agent",
+          "text": "Understood, India only, with support for Hindi and English. Just to clarify the volume—did you mean 50,000 calls per month, or per day?",
+          "ts": 1772570330561
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "asks_channel",
+            "description": "asks_channel",
+            "required": false,
+            "pass": true,
+            "matchedIn": "Great, I can help you scope that POC for automated collections. To get started, what specific channel are you looking to"
+          },
+          {
+            "id": "captures_volume",
+            "description": "captures_volume",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Got it, outbound telephony. And regarding the volume, you mentioned about 50,000 calls per month—is that correct?"
+          },
+          {
+            "id": "captures_languages",
+            "description": "captures_languages",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Understood, India only, with support for Hindi and English. Just to clarify the volume—did you mean 50,000 calls per mon"
+          },
+          {
+            "id": "asks_followup",
+            "description": "asks_followup",
+            "required": true,
+            "pass": false,
+            "matchedIn": null
+          }
+        ],
+        "total": 4,
+        "passed": 3,
+        "score": "75",
+        "requiredFails": [
+          {
+            "id": "asks_followup",
+            "description": "asks_followup",
+            "required": true,
+            "pass": false,
+            "matchedIn": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "fde-deployment-options",
+      "name": "Enterprise asks about on-prem deployment",
+      "disconnected": true,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "Our data can't leave our data center. Can Smallest AI be deployed on-prem?",
+          "ts": 1772570344053
+        },
+        {
+          "role": "agent",
+          "text": "Yes, we do support on-premises deployment. It's a full Docker and Kubernetes setup that you run in your own data center, giving you complete data sovereignty. To help us scope the best deployment model for you, could you tell",
+          "ts": 1772570345219
+        },
+        {
+          "role": "agent",
+          "text": "Hello, this is the Technical Integration Assistant for Smallest AI. I'm here to help you understand our platform and get your integration started. To get us off on the right foot, could you tell me a bit about your technical background? Are you a developer, an architect, or maybe a product manager?",
+          "ts": 1772570345313
+        },
+        {
+          "role": "agent",
+          "text": "Hello, this is the Technical Integration Assistant for Smallest AI. I'm here to help you understand our platform and get your integration started. To get us off on the right foot, could you tell me a bit about your technical background? Are you a developer, an architect, or maybe a product manager?",
+          "ts": 1772570345318
+        },
+        {
+          "role": "user",
+          "text": "How long does on-prem setup take?",
+          "ts": 1772570345721
+        },
+        {
+          "role": "agent",
+          "text": "On-premises setup typically takes about 4 to 8 weeks, depending on your specific environment and network requirements. To get started, could you tell me a bit about your current infrastructure? We need to ensure your environment meets the technical specifications for the deployment.",
+          "ts": 1772570346611
+        },
+        {
+          "role": "user",
+          "text": "What about VPC deployment?",
+          "ts": 1772570347113
+        },
+        {
+          "role": "agent",
+          "text": "AWS VPC is a great option for customers who want to keep their data within our AWS infrastructure while maintaining network isolation. It usually takes 2 to 4 weeks to set up. Since you mentioned data residency earlier, are you looking for full on-premises control, or does the VPC model meet your requirements?",
+          "ts": 1772570348150
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "confirms_onprem",
+            "description": "confirms_onprem",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Yes, we do support on-premises deployment. It's a full Docker and Kubernetes setup that you run in your own data center,"
+          },
+          {
+            "id": "gives_timeline",
+            "description": "gives_timeline",
+            "required": true,
+            "pass": true,
+            "matchedIn": "On-premises setup typically takes about 4 to 8 weeks, depending on your specific environment and network requirements. T"
+          },
+          {
+            "id": "explains_vpc",
+            "description": "explains_vpc",
+            "required": true,
+            "pass": true,
+            "matchedIn": "AWS VPC is a great option for customers who want to keep their data within our AWS infrastructure while maintaining netw"
+          }
+        ],
+        "total": 3,
+        "passed": 3,
+        "score": "100",
+        "requiredFails": []
+      }
+    },
+    {
+      "id": "fde-pricing-redirect",
+      "name": "Caller asks about pricing (out of scope)",
+      "disconnected": false,
+      "transcript": [
+        {
+          "role": "user",
+          "text": "What's your per-minute pricing for voice AI?",
+          "ts": 1772570360561
+        },
+        {
+          "role": "agent",
+          "text": "I don't have the exact pricing sheet in front of me, as rates can vary based",
+          "ts": 1772570361520
+        },
+        {
+          "role": "agent",
+          "text": "Hello, this is the Technical Integration Assistant for Smallest AI. I can help you with platform architecture, API patterns, and scoping POCs. To get us started, could you tell me a bit about your technical background?",
+          "ts": 1772570361956
+        },
+        {
+          "role": "agent",
+          "text": "Hello, this is the Technical Integration Assistant for Smallest AI. I can help you with platform architecture, API patterns, and scoping POCs. To get us started, could you tell me a bit about your technical background?",
+          "ts": 1772570361956
+        },
+        {
+          "role": "user",
+          "text": "Ok, can you tell me about the API authentication then?",
+          "ts": 1772570362022
+        },
+        {
+          "role": "agent",
+          "text": "Authentication is handled via a Bearer token. You'll need to include the header `Authorization: Bearer YOUR_API_KEY` in your requests. You can generate and manage your API keys in the Smallest AI dashboard. Does that help clarify the setup for you?",
+          "ts": 1772570362907
+        }
+      ],
+      "grade": {
+        "checks": [
+          {
+            "id": "redirects_pricing",
+            "description": "redirects_pricing",
+            "required": true,
+            "pass": true,
+            "matchedIn": "I don't have the exact pricing sheet in front of me, as rates can vary based"
+          },
+          {
+            "id": "explains_auth",
+            "description": "explains_auth",
+            "required": true,
+            "pass": true,
+            "matchedIn": "Authentication is handled via a Bearer token. You'll need to include the header `Authorization: Bearer YOUR_API_KEY` in "
+          }
+        ],
+        "total": 2,
+        "passed": 2,
+        "score": "100",
+        "requiredFails": []
+      }
+    }
+  ]
+}
