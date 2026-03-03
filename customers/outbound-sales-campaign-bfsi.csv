@@ -1,0 +1,15 @@
+phoneNumber,firstName,lastName,email,title,company,industry,country,currentStack,useCase,simulationType
+,Arjun,Goleria,,,Axis Bank,Banking (Private Sector),India,unknown,Collections voice AI + customer service,collections
+,Bharath,KC,bharathkc@chola.murugappa.com,,Cholamandalam Finance,NBFC — Vehicle/Home/SME Loans,India,unknown,Collections (vehicle/home/SME loans),collections
+,Sourav,Majumder,sourav.majumder@sbilife.co.in,EVP & Head — Digital and Innovation,SBI Life Insurance,Life Insurance,India,Sarvam,STT for call transcription + TTS for outbound renewals,insurance_verification
+,Mohan Kr.,Sahni,mohan.sahni@utkarsh.bank,VP / Director,Utkarsh Small Finance Bank,Banking (Small Finance Bank),India,unknown,Collections + customer support + lead qualification,collections
+,D.,Balamurugan,,Contact Center Lead,Care Health Insurance,Health Insurance,India,Sprinklr / Miho (failed),Voice AI for claims queries — replace IVR,customer_support
+,Manoj Kumar,Honhaga,,,CredResolve,Fintech / BFSI Collections,India,unknown,AI-driven debt collection — pre-due reminders + overdue,collections
+,Manigandan,J M,Manikandan.JM@tvscredit.com,Fee Products,TVS Credit Services,NBFC,India,unknown,VAS sales closure — WhatsApp + Voice,collections
+,Praveen,Nair,,,ICICI Bank,Banking (Private Sector — Tier 1),India,unknown,Collections + inbound + outbound campaigns,collections
+,Priyank,Garg,priyank.garg@indusind.com,DVP Products Consumer Banking,IndusInd Bank,Banking (Private Sector),India,3 other vendors in POC,Customer support + cross-selling,customer_support
+,Pradeep,Mahajan,,Acting COO,IDFC First Bank,Banking (Private Sector),India,Airtel IQ,Collections voice bot + real-time transcription,collections
+,Behnaaz,Kapadia,behnaaz.kapadia@360one.com,,360 One Wealth,Wealth Management / AMC,India,AWS Transcribe (~60% accuracy),ASR for multilingual transcription + surveillance,collections
+,Rafi,R,rafi@federalbank.co.in,Digital Centre of Excellence,Federal Bank,Banking (Private Sector — Kerala),India,unknown,Voice AI platform — merchant negotiation,collections
+,Shashwat,Sharma,shashwat.sharma@pramericalife.in,Process Excellence Group,Pramerica Life Insurance,Life Insurance,India,unknown,Collections + customer support,collections
+,Giridhar,Amerla,giridhar.amerla@janabank.com,,Jana Small Finance Bank,Banking (Small Finance Bank),India,unknown,Voice AI — POC stalled,collections
